@@ -13,6 +13,7 @@ const Index = () => {
       <BrandStory />
       <Newsletter />
       <Footer />
+      <WhatsAppButton />
     </main>
   );
 };
