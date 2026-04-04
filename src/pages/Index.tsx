@@ -3,6 +3,7 @@ import Scents from "@/components/Scents";
 import BrandStory from "@/components/BrandStory";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
