@@ -1,35 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import candleAmber from "@/assets/candle-amber.jpg";
-import candleSage from "@/assets/candle-sage.jpg";
-import candleVanilla from "@/assets/candle-vanilla.jpg";
-import candleFig from "@/assets/candle-fig.jpg";
-
-const candles = [
-  {
-    name: "Amber Dusk",
-    notes: "Amber · Warm Musk · Tonka",
-    price: "$48",
-    image: candleAmber,
-  },
-  {
-    name: "Sage & Lavender",
-    notes: "Clary Sage · Lavender · Cedarwood",
-    price: "$44",
-    image: candleSage,
-  },
-  {
-    name: "Vanilla Santal",
-    notes: "Vanilla · Sandalwood · Soft Smoke",
-    price: "$46",
-    image: candleVanilla,
-  },
-  {
-    name: "Fig & Cedar",
-    notes: "Wild Fig · Cedar · Earth",
-    price: "$44",
-    image: candleFig,
-  },
-];
+import { Link } from "react-router-dom";
+import { candles } from "@/data/candles";
 
 const ScentCard = ({ candle, index }: { candle: typeof candles[0]; index: number }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -47,30 +18,32 @@ const ScentCard = ({ candle, index }: { candle: typeof candles[0]; index: number
   return (
     <div
       ref={ref}
-      className={`group cursor-pointer transition-all duration-700 ${
+      className={`transition-all duration-700 ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       }`}
       style={{ transitionDelay: `${index * 150}ms` }}
     >
-      <div className="overflow-hidden mb-5">
-        <img
-          src={candle.image}
-          alt={candle.name}
-          loading="lazy"
-          width={640}
-          height={800}
-          className="w-full aspect-[4/5] object-cover transition-all duration-700 group-hover:scale-105"
-        />
-      </div>
-      <h3 className="font-heading text-2xl font-light text-foreground mb-1">
-        {candle.name}
-      </h3>
-      <p className="body-refined text-sm text-muted-foreground mb-2">
-        {candle.notes}
-      </p>
-      <p className="font-body text-sm tracking-widest text-accent">
-        {candle.price}
-      </p>
+      <Link to={`/scent/${candle.slug}`} className="group block cursor-pointer">
+        <div className="overflow-hidden mb-5">
+          <img
+            src={candle.image}
+            alt={candle.name}
+            loading="lazy"
+            width={640}
+            height={800}
+            className="w-full aspect-[4/5] object-cover transition-all duration-700 group-hover:scale-105"
+          />
+        </div>
+        <h3 className="font-heading text-2xl font-light text-foreground mb-1">
+          {candle.name}
+        </h3>
+        <p className="body-refined text-sm text-muted-foreground mb-2">
+          {candle.notes}
+        </p>
+        <p className="font-body text-sm tracking-widest text-accent">
+          ${candle.price}
+        </p>
+      </Link>
     </div>
   );
 };
