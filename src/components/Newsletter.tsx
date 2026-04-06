@@ -21,7 +21,7 @@ const Newsletter = () => {
   };
 
   return (
-    <section className="py-24 md:py-32 px-6 bg-secondary/50" ref={ref}>
+    <section id="newsletter" className="py-24 md:py-32 px-6 bg-secondary/50" ref={ref}>
       <div
         className={`max-w-lg mx-auto text-center transition-all duration-1000 ${
           visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
