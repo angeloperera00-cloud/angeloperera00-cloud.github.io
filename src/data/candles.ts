@@ -43,7 +43,7 @@ export const candles: CandleProduct[] = [
     price: 44,
     image: candleSage,
     description:
-      "An herbal meditation in wax. Sage & Lavender draws from the wild gardens of Provence — aromatic, calming, and deeply grounding. Let it carry you into a state of quiet contemplation.",
+      "An herbal meditation in wax. Sage & Lavender draws from the wild gardens of Provence, aromatic, calming, and deeply grounding. Let it carry you into a state of quiet contemplation.",
     topNotes: "Eucalyptus, Green Leaves",
     heartNotes: "Clary Sage, French Lavender",
     baseNotes: "Cedarwood, White Musk",
