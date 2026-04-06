@@ -17,7 +17,7 @@ const BrandStory = () => {
   }, []);
 
   return (
-    <section className="py-24 md:py-32 px-6" ref={ref}>
+    <section id="story" className="py-24 md:py-32 px-6" ref={ref}>
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
         {/* Image - asymmetric offset */}
         <div
