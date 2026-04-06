@@ -55,10 +55,10 @@ const BrandStory = () => {
               shadow. Each candle is hand-poured in small batches using 100% natural soy wax and cotton wicks.
             </p>
             <p>
-              We source our fragrance oils from artisan perfumers who share our devotion to subtlety — never
+              We source our fragrance oils from artisan perfumers who share our devotion to subtlety, never
               overpowering, always evocative. Every scent is designed to transform a room into a sanctuary.
             </p>
-            <p>Burning time: 50–60 hours of slow, steady warmth.</p>
+            <p>Burning time: 50 to 60 hours of slow, steady warmth.</p>
           </div>
           <div className="mt-10 h-px w-16 bg-accent" />
         </div>

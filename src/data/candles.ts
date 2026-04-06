@@ -25,11 +25,11 @@ export const candles: CandleProduct[] = [
     price: 48,
     image: candleAmber,
     description:
-      "A warm, enveloping scent that captures the golden hour — when the last light clings to the horizon and everything slows. Amber Dusk fills your space with rich resinous amber, a whisper of warm musk, and the creamy sweetness of tonka bean.",
+      "A warm, enveloping scent that captures the golden hour, when the last light clings to the horizon and everything slows. Amber Dusk fills your space with rich resinous amber, a whisper of warm musk, and the creamy sweetness of tonka bean.",
     topNotes: "Bergamot, Pink Pepper",
     heartNotes: "Amber Resin, Warm Musk",
     baseNotes: "Tonka Bean, Benzoin, Vanilla",
-    burnTime: "50–60 hours",
+    burnTime: "50 to 60 hours",
     sizes: [
       { label: "Petite", weight: "120g", price: 28 },
       { label: "Classic", weight: "240g", price: 48 },
@@ -43,11 +43,11 @@ export const candles: CandleProduct[] = [
     price: 44,
     image: candleSage,
     description:
-      "An herbal meditation in wax. Sage & Lavender draws from the wild gardens of Provence — aromatic, calming, and deeply grounding. Let it carry you into a state of quiet contemplation.",
+      "An herbal meditation in wax. Sage & Lavender draws from the wild gardens of Provence, aromatic, calming, and deeply grounding. Let it carry you into a state of quiet contemplation.",
     topNotes: "Eucalyptus, Green Leaves",
     heartNotes: "Clary Sage, French Lavender",
     baseNotes: "Cedarwood, White Musk",
-    burnTime: "50–60 hours",
+    burnTime: "50 to 60 hours",
     sizes: [
       { label: "Petite", weight: "120g", price: 26 },
       { label: "Classic", weight: "240g", price: 44 },
@@ -61,11 +61,11 @@ export const candles: CandleProduct[] = [
     price: 46,
     image: candleVanilla,
     description:
-      "A scent of quiet luxury. Vanilla Santal wraps your room in velvety warmth — creamy Madagascar vanilla layered over smooth sandalwood, with the faintest trail of soft woodsmoke. Intimate, comforting, unforgettable.",
+      "A scent of quiet luxury. Vanilla Santal wraps your room in velvety warmth. Creamy Madagascar vanilla layered over smooth sandalwood, with the faintest trail of soft woodsmoke. Intimate, comforting, unforgettable.",
     topNotes: "Cardamom, Saffron",
     heartNotes: "Madagascar Vanilla, Sandalwood",
     baseNotes: "Soft Smoke, Cashmere Musk",
-    burnTime: "50–60 hours",
+    burnTime: "50 to 60 hours",
     sizes: [
       { label: "Petite", weight: "120g", price: 28 },
       { label: "Classic", weight: "240g", price: 46 },
@@ -83,7 +83,7 @@ export const candles: CandleProduct[] = [
     topNotes: "Fig Leaf, Green Stems",
     heartNotes: "Wild Fig, Atlas Cedar",
     baseNotes: "Vetiver, Oakmoss, Earth",
-    burnTime: "50–60 hours",
+    burnTime: "50 to 60 hours",
     sizes: [
       { label: "Petite", weight: "120g", price: 26 },
       { label: "Classic", weight: "240g", price: 44 },
