@@ -65,7 +65,7 @@ export const candles: CandleProduct[] = [
     topNotes: "Cardamom, Saffron",
     heartNotes: "Madagascar Vanilla, Sandalwood",
     baseNotes: "Soft Smoke, Cashmere Musk",
-    burnTime: "50–60 hours",
+    burnTime: "50 to 60 hours",
     sizes: [
       { label: "Petite", weight: "120g", price: 28 },
       { label: "Classic", weight: "240g", price: 46 },
