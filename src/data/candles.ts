@@ -61,7 +61,7 @@ export const candles: CandleProduct[] = [
     price: 46,
     image: candleVanilla,
     description:
-      "A scent of quiet luxury. Vanilla Santal wraps your room in velvety warmth — creamy Madagascar vanilla layered over smooth sandalwood, with the faintest trail of soft woodsmoke. Intimate, comforting, unforgettable.",
+      "A scent of quiet luxury. Vanilla Santal wraps your room in velvety warmth. Creamy Madagascar vanilla layered over smooth sandalwood, with the faintest trail of soft woodsmoke. Intimate, comforting, unforgettable.",
     topNotes: "Cardamom, Saffron",
     heartNotes: "Madagascar Vanilla, Sandalwood",
     baseNotes: "Soft Smoke, Cashmere Musk",
