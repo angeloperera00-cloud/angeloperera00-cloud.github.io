@@ -25,7 +25,7 @@ export const candles: CandleProduct[] = [
     price: 48,
     image: candleAmber,
     description:
-      "A warm, enveloping scent that captures the golden hour — when the last light clings to the horizon and everything slows. Amber Dusk fills your space with rich resinous amber, a whisper of warm musk, and the creamy sweetness of tonka bean.",
+      "A warm, enveloping scent that captures the golden hour, when the last light clings to the horizon and everything slows. Amber Dusk fills your space with rich resinous amber, a whisper of warm musk, and the creamy sweetness of tonka bean.",
     topNotes: "Bergamot, Pink Pepper",
     heartNotes: "Amber Resin, Warm Musk",
     baseNotes: "Tonka Bean, Benzoin, Vanilla",
