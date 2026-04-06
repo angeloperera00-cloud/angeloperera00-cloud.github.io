@@ -34,7 +34,7 @@ const Newsletter = () => {
           Join the Glow
         </h2>
         <p className="body-refined text-muted-foreground mb-10">
-          Receive seasonal scent drops, rituals for the home, and quiet inspiration — delivered softly to your inbox.
+          Receive seasonal scent drops, rituals for the home, and quiet inspiration, delivered softly to your inbox.
         </p>
 
         {!submitted ? (
