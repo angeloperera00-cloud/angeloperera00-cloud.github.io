@@ -56,7 +56,7 @@ const Newsletter = () => {
           </form>
         ) : (
           <p className="body-refined text-accent animate-fade-up">
-            Thank you — welcome to the ritual. ✦
+            Thank you, welcome to the ritual. ✦
           </p>
         )}
       </div>
