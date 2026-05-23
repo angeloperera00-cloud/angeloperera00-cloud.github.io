@@ -77,7 +77,7 @@ const Scents = () => {
           Our Scents
         </h2>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 md:gap-10">
         {candles.map((candle, i) => (
           <ScentCard key={candle.name} candle={candle} index={i} />
         ))}
