@@ -39,11 +39,11 @@ export interface CandleProduct {
 
 
 export const availableFragrances = [
-  "No Fragrance",
   "Madagascar Vanilla",
   "Rose Garden",
   "Ocean Breeze",
   "Frangipani & Lime",
+  "No Fragrance",
 ];
 
 
