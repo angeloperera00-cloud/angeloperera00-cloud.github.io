@@ -9,6 +9,8 @@ const ProductDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const candle = getCandleBySlug(slug || "");
   const [selectedSize, setSelectedSize] = useState(0);
+  const [selectedFragrance, setSelectedFragrance] = useState<string>(availableFragrances[0]);
+  const [selectedColour, setSelectedColour] = useState<string>(availableColours[0]);
   const [visible, setVisible] = useState(false);
   const { addItem, isLoading } = useCartStore();
 
