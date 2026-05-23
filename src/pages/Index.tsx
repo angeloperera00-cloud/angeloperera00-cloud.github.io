@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import Scents from "@/components/Scents";
 import BrandStory from "@/components/BrandStory";
+import SpecialRequest from "@/components/SpecialRequest";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -10,7 +11,9 @@ const Index = () => {
     <main className="min-h-screen bg-background">
       <Hero />
       <Scents />
+      <SpecialRequest />
       <BrandStory />
+
       <Newsletter />
       <Footer />
       <WhatsAppButton />
