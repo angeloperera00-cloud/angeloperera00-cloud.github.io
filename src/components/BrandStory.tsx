@@ -7,60 +7,66 @@ const BrandStory = () => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setVisible(true);
-      },
-      { threshold: 0.2 },
+      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
+      { threshold: 0.2 }
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
   }, []);
 
   return (
-    <section id="story" className="py-24 md:py-32 px-6" ref={ref}>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
-        {/* Image - asymmetric offset */}
+    <section id="story" className="relative py-28 md:py-40 px-6 overflow-hidden" ref={ref}>
+      {/* atmospheric backdrop */}
+      <div className="absolute -top-20 -right-20 w-[600px] h-[600px] rounded-full bg-[hsl(var(--terracotta))]/10 blur-3xl pointer-events-none" />
+
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
+        {/* Image with vignette frame */}
         <div
-          className={`transition-all duration-1000 ${
-            visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+          className={`md:col-span-7 transition-all duration-[1200ms] ${
+            visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"
           }`}
         >
-          <div className="md:ml-8 md:-mt-12">
+          <div className="relative vignette overflow-hidden">
             <img
               src={storyImage}
-              alt="Artisan hand-pouring candle wax in a warm workshop"
+              alt="Artisan hand-pouring candle wax in a warm Naples workshop"
               loading="lazy"
-              width={800}
-              height={1000}
-              className="w-full max-w-md mx-auto md:mx-0 object-cover shadow-2xl"
+              width={1000}
+              height={1200}
+              className="w-full aspect-[4/5] object-cover grayscale-[15%] contrast-110 brightness-90 animate-slow-pan"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-background/30 pointer-events-none" />
           </div>
         </div>
 
-        {/* Text */}
+        {/* Editorial copy */}
         <div
-          className={`transition-all duration-1000 delay-300 ${
-            visible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+          className={`md:col-span-5 transition-all duration-[1200ms] delay-300 ${
+            visible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"
           }`}
         >
-          <p className="font-body text-xs tracking-[0.4em] uppercase text-muted-foreground mb-6">Our Story</p>
-          <h2 className="heading-display text-4xl md:text-5xl text-foreground mb-8 leading-tight">
-            Born from
-            <br />
-            Stillness
+          <p className="small-caps text-[hsl(var(--antique-gold))] text-xs mb-6">
+            La nostra storia
+          </p>
+          <h2 className="heading-cinema text-5xl md:text-6xl text-[hsl(var(--champagne))] mb-10 leading-[.95]">
+            Born from<br />
+            <em className="text-[hsl(var(--glow-amber))]">stillness</em>.
           </h2>
-          <div className="space-y-5 body-refined text-muted-foreground">
+          <div className="space-y-6 body-refined text-foreground/75 text-lg">
             <p>
-              Glow was born in a quiet studio in the Naples in Italy, where the rhythm of the day is set by light and
-              shadow. Each candle is hand-poured in small batches using 100% natural soy wax and cotton wicks.
+              Glow is born in a quiet studio in Naples, where the rhythm of the day
+              is set by light, shadow, and the slow Tyrrhenian sun. Each candle is
+              hand-poured in small batches.
             </p>
             <p>
-              We source our fragrance oils from artisan perfumers who share our devotion to subtlety, never
-              overpowering, always evocative. Every scent is designed to transform a room into a sanctuary.
+              We source botanical fragrance oils from artisan perfumers who share
+              our devotion to subtlety — never overpowering, always evocative.
             </p>
-            <p>Burning time: 50 to 60 hours of slow, steady warmth.</p>
+            <p className="italic text-[hsl(var(--champagne))]/80">
+              Fatto a mano, con cura, una candela alla volta.
+            </p>
           </div>
-          <div className="mt-10 h-px w-16 bg-accent" />
+          <div className="mt-12 h-px w-20 bg-[hsl(var(--antique-gold))]" />
         </div>
       </div>
     </section>
