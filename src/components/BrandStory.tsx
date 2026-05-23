@@ -51,7 +51,7 @@ const BrandStory = () => {
           </h2>
           <div className="space-y-5 body-refined text-muted-foreground">
             <p>
-              Lumière was born in a quiet studio in the Naples in Italy, where the rhythm of the day is set by light and
+              Glow was born in a quiet studio in the Naples in Italy, where the rhythm of the day is set by light and
               shadow. Each candle is hand-poured in small batches using 100% natural soy wax and cotton wicks.
             </p>
             <p>

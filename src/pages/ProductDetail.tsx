@@ -104,7 +104,7 @@ const ProductDetail = () => {
           }`}
         >
           <p className="font-body text-xs tracking-[0.4em] uppercase text-muted-foreground mb-3">
-            Lumière Collection
+            Glow Collection
           </p>
           <h1 className="heading-display text-4xl md:text-5xl text-foreground mb-2">
             {candle.name}

@@ -13,7 +13,7 @@ const Hero = () => {
     <section className="relative h-screen w-full overflow-hidden">
       <img
         src={heroImage}
-        alt="Lumière luxury candles glowing in warm amber light"
+        alt="Glow luxury candles glowing in warm amber light"
         className="absolute inset-0 w-full h-full object-cover"
         width={1920}
         height={1080}

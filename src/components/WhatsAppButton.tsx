@@ -1,5 +1,5 @@
 const WHATSAPP_NUMBER = "1234567890";
-const DEFAULT_MESSAGE = encodeURIComponent("Hi! I'm interested in Lumière candles");
+const DEFAULT_MESSAGE = encodeURIComponent("Hi! I'm interested in Glow candles");
 
 const WhatsAppButton = () => {
   return (
