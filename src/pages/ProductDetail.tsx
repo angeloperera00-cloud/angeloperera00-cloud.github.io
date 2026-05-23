@@ -96,12 +96,13 @@ const ProductDetail = () => {
           }`}
         >
           <img
-            src={candle.image}
-            alt={candle.name}
+            src={candle.sizeImages?.[currentSize.label] ?? candle.image}
+            alt={`${candle.name} ${currentSize.label}`}
             width={640}
             height={800}
-            className="w-full max-w-lg mx-auto object-cover shadow-2xl"
+            className="w-full max-w-lg mx-auto object-cover shadow-2xl transition-opacity duration-500"
           />
+
         </div>
 
         <div
