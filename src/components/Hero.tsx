@@ -33,7 +33,7 @@ const Hero = () => {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          G l o w
+          Glow
         </p>
         <h1
           className={`heading-display text-5xl md:text-7xl lg:text-8xl text-primary-foreground mb-8 transition-all duration-1000 delay-300 ${
