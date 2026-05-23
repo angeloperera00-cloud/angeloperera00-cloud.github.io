@@ -64,7 +64,11 @@ const ProductDetail = () => {
       variantTitle: currentSize.label,
       price: { amount: String(currentSize.price), currencyCode: "EUR" },
       quantity: 1,
-      selectedOptions: [{ name: "Size", value: `${currentSize.label} · ${currentSize.weight}` }],
+      selectedOptions: [
+        { name: "Size", value: `${currentSize.label} · ${currentSize.weight}` },
+        { name: "Fragrance", value: selectedFragrance },
+        { name: "Colour", value: selectedColour },
+      ],
     });
 
     toast.success(`${candle.name} (${currentSize.label}) added to cart`, {
