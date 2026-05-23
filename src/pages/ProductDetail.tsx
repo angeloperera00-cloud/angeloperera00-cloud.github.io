@@ -129,9 +129,18 @@ const ProductDetail = () => {
             </h3>
             <div className="flex flex-wrap gap-2">
               {availableFragrances.map((f) => (
-                <span key={f} className="px-3 py-1.5 border border-border font-body text-xs text-muted-foreground">
+                <button
+                  key={f}
+                  type="button"
+                  onClick={() => setSelectedFragrance(f)}
+                  className={`px-3 py-1.5 border font-body text-xs transition-all ${
+                    selectedFragrance === f
+                      ? "border-foreground bg-foreground text-primary-foreground"
+                      : "border-border text-muted-foreground hover:border-foreground/40"
+                  }`}
+                >
                   {f}
-                </span>
+                </button>
               ))}
             </div>
           </div>
@@ -142,9 +151,18 @@ const ProductDetail = () => {
             </h3>
             <div className="flex flex-wrap gap-2">
               {availableColours.map((c) => (
-                <span key={c} className="px-3 py-1.5 border border-border font-body text-xs text-muted-foreground">
+                <button
+                  key={c}
+                  type="button"
+                  onClick={() => setSelectedColour(c)}
+                  className={`px-3 py-1.5 border font-body text-xs transition-all ${
+                    selectedColour === c
+                      ? "border-foreground bg-foreground text-primary-foreground"
+                      : "border-border text-muted-foreground hover:border-foreground/40"
+                  }`}
+                >
                   {c}
-                </span>
+                </button>
               ))}
             </div>
           </div>
