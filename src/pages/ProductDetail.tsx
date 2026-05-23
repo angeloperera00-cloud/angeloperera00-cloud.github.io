@@ -167,7 +167,7 @@ const ProductDetail = () => {
 
           <div className="flex items-center gap-6">
             <span className="font-heading text-3xl font-light text-foreground">
-              ${currentSize.price}
+              €{currentSize.price.toFixed(2)}
             </span>
             <button
               onClick={handleAddToCart}
@@ -180,12 +180,13 @@ const ProductDetail = () => {
 
           <div className="mt-12 pt-8 border-t border-border space-y-3">
             <p className="font-body text-xs text-muted-foreground">
-              100% natural soy wax · Cotton wick · Hand-poured
+              100% natural soy wax · Cotton wick · Hand poured
             </p>
             <p className="font-body text-xs text-muted-foreground">
-              Free shipping on orders over $75
+              Carefully packaged and shipped with care
             </p>
           </div>
+
         </div>
       </div>
     </main>
