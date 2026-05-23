@@ -28,20 +28,20 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
-        <p
-          className={`font-body text-sm tracking-[0.35em] uppercase text-primary-foreground/70 mb-6 transition-all duration-1000 ${
+        <h1
+          className={`heading-display text-6xl md:text-8xl lg:text-9xl text-primary-foreground mb-2 transition-all duration-1000 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
           Glow
-        </p>
-        <h1
-          className={`heading-display text-5xl md:text-7xl lg:text-8xl text-primary-foreground mb-8 transition-all duration-1000 delay-300 ${
+        </h1>
+        <h2
+          className={`heading-display text-3xl md:text-5xl lg:text-6xl text-primary-foreground/80 mb-8 transition-all duration-1000 delay-300 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
           Light Your Ritual
-        </h1>
+        </h2>
         <p
           className={`body-refined text-primary-foreground/60 max-w-md mb-10 transition-all duration-1000 delay-500 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
