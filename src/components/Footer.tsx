@@ -31,7 +31,7 @@ const Footer = () => {
         <Flame className="w-6 h-6 text-accent mb-6 animate-gentle-float" />
 
         <p className="font-heading text-2xl font-light tracking-widest text-foreground mb-8">
-          Lumière
+          Glow
         </p>
 
         <nav className="flex flex-wrap justify-center gap-8 mb-10">
@@ -48,7 +48,7 @@ const Footer = () => {
         </nav>
 
         <p className="font-body text-xs text-muted-foreground/50">
-          © 2026 Lumière. All rights reserved.
+          © 2026 Glow. All rights reserved.
         </p>
       </div>
     </footer>
