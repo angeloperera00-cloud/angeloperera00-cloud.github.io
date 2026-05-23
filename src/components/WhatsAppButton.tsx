@@ -1,10 +1,13 @@
 const WHATSAPP_NUMBER = "393475777866";
 const DEFAULT_MESSAGE = encodeURIComponent("Hi! I'm interested in Glow candles");
+const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${DEFAULT_MESSAGE}`;
 
 const WhatsAppButton = () => {
   return (
     <a
-      href={`https://wa.me/${WHATSAPP_NUMBER}?text=${DEFAULT_MESSAGE}`}
+      href={WHATSAPP_URL}
+      data-phone-number={WHATSAPP_NUMBER}
+      data-whatsapp-url={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
