@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { getCandleBySlug } from "@/data/candles";
-import { ArrowLeft, Flame, Loader2 } from "lucide-react";
+import { getCandleBySlug, availableColours, availableFragrances } from "@/data/candles";
+import { ArrowLeft, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { useCartStore } from "@/stores/cartStore";
 
@@ -48,7 +48,7 @@ const ProductDetail = () => {
           priceRange: {
             minVariantPrice: {
               amount: String(currentSize.price),
-              currencyCode: "USD",
+              currencyCode: "EUR",
             },
           },
           images: {
@@ -60,15 +60,16 @@ const ProductDetail = () => {
       },
       variantId: fakeVariantId,
       variantTitle: currentSize.label,
-      price: { amount: String(currentSize.price), currencyCode: "USD" },
+      price: { amount: String(currentSize.price), currencyCode: "EUR" },
       quantity: 1,
       selectedOptions: [{ name: "Size", value: `${currentSize.label} · ${currentSize.weight}` }],
     });
 
     toast.success(`${candle.name} (${currentSize.label}) added to cart`, {
-      description: `$${currentSize.price} · ${currentSize.weight}`,
+      description: `€${currentSize.price.toFixed(2)} · ${currentSize.weight}`,
     });
   };
+
 
   return (
     <main className="min-h-screen bg-background">
@@ -118,32 +119,30 @@ const ProductDetail = () => {
 
           <div className="mb-10 space-y-3">
             <h3 className="font-body text-xs tracking-[0.3em] uppercase text-foreground/70 mb-4">
-              Scent Profile
+              Available Fragrances
             </h3>
-            <div className="grid grid-cols-3 gap-4">
-              {[
-                { label: "Top", value: candle.topNotes },
-                { label: "Heart", value: candle.heartNotes },
-                { label: "Base", value: candle.baseNotes },
-              ].map((note) => (
-                <div key={note.label}>
-                  <p className="font-body text-[10px] tracking-[0.3em] uppercase text-accent mb-1">
-                    {note.label}
-                  </p>
-                  <p className="font-body text-xs text-muted-foreground leading-relaxed">
-                    {note.value}
-                  </p>
-                </div>
+            <div className="flex flex-wrap gap-2">
+              {availableFragrances.map((f) => (
+                <span key={f} className="px-3 py-1.5 border border-border font-body text-xs text-muted-foreground">
+                  {f}
+                </span>
               ))}
             </div>
           </div>
 
-          <div className="flex items-center gap-2 mb-10 text-muted-foreground">
-            <Flame className="w-4 h-4 text-accent" />
-            <span className="font-body text-xs tracking-wider">
-              Burn time: {candle.burnTime}
-            </span>
+          <div className="mb-10 space-y-3">
+            <h3 className="font-body text-xs tracking-[0.3em] uppercase text-foreground/70 mb-4">
+              Available Colours
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {availableColours.map((c) => (
+                <span key={c} className="px-3 py-1.5 border border-border font-body text-xs text-muted-foreground">
+                  {c}
+                </span>
+              ))}
+            </div>
           </div>
+
 
           <div className="mb-8">
             <p className="font-body text-xs tracking-[0.3em] uppercase text-foreground/70 mb-4">
@@ -169,7 +168,7 @@ const ProductDetail = () => {
 
           <div className="flex items-center gap-6">
             <span className="font-heading text-3xl font-light text-foreground">
-              ${currentSize.price}
+              €{currentSize.price.toFixed(2)}
             </span>
             <button
               onClick={handleAddToCart}
@@ -182,12 +181,13 @@ const ProductDetail = () => {
 
           <div className="mt-12 pt-8 border-t border-border space-y-3">
             <p className="font-body text-xs text-muted-foreground">
-              100% natural soy wax · Cotton wick · Hand-poured
+              100% natural soy wax · Cotton wick · Hand poured
             </p>
             <p className="font-body text-xs text-muted-foreground">
-              Free shipping on orders over $75
+              Carefully packaged and shipped with care
             </p>
           </div>
+
         </div>
       </div>
     </main>

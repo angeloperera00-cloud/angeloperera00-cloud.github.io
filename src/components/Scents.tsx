@@ -41,7 +41,7 @@ const ScentCard = ({ candle, index }: { candle: typeof candles[0]; index: number
           {candle.notes}
         </p>
         <p className="font-body text-sm tracking-widest text-accent">
-          ${candle.price}
+          €{candle.price.toFixed(2)}
         </p>
       </Link>
     </div>
