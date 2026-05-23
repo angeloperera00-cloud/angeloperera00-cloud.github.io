@@ -24,15 +24,16 @@ const ScentCard = ({ candle, index }: { candle: typeof candles[0]; index: number
       style={{ transitionDelay: `${index * 150}ms` }}
     >
       <Link to={`/scent/${candle.slug}`} className="group block cursor-pointer">
-        <div className="overflow-hidden mb-5">
+        <div className="relative overflow-hidden mb-5 rounded-sm bg-muted/30 shadow-[0_10px_40px_-15px_hsl(var(--foreground)/0.25)] transition-shadow duration-700 group-hover:shadow-[0_25px_60px_-15px_hsl(var(--foreground)/0.45)]">
           <img
             src={candle.image}
             alt={candle.name}
             loading="lazy"
             width={640}
             height={800}
-            className="w-full aspect-[4/5] object-cover transition-all duration-700 group-hover:scale-105"
+            className="w-full aspect-[4/5] object-cover transition-all duration-[1200ms] ease-out group-hover:scale-110"
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100" />
         </div>
         <h3 className="font-heading text-2xl font-light text-foreground mb-1">
           {candle.name}
@@ -76,7 +77,7 @@ const Scents = () => {
           Our Scents
         </h2>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 md:gap-10">
         {candles.map((candle, i) => (
           <ScentCard key={candle.name} candle={candle} index={i} />
         ))}
