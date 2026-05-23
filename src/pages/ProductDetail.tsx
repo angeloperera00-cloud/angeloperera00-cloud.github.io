@@ -72,7 +72,7 @@ const ProductDetail = () => {
     });
 
     toast.success(`${candle.name} (${currentSize.label}) added to cart`, {
-      description: `€${currentSize.price.toFixed(2)} · ${currentSize.weight}`,
+      description: `€${currentSize.price.toFixed(2)} · ${selectedFragrance} · ${selectedColour}`,
     });
   };
 
