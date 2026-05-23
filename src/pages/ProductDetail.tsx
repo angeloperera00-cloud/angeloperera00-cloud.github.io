@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { getCandleBySlug } from "@/data/candles";
-import { ArrowLeft, Flame, Loader2 } from "lucide-react";
+import { getCandleBySlug, availableColours, availableFragrances } from "@/data/candles";
+import { ArrowLeft, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { useCartStore } from "@/stores/cartStore";
 
