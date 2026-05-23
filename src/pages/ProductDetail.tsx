@@ -8,7 +8,7 @@ import { useCartStore } from "@/stores/cartStore";
 const ProductDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const candle = getCandleBySlug(slug || "");
-  const [selectedSize, setSelectedSize] = useState(1);
+  const [selectedSize, setSelectedSize] = useState(0);
   const [visible, setVisible] = useState(false);
   const { addItem, isLoading } = useCartStore();
 
