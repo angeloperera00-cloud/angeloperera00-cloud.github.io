@@ -9,6 +9,8 @@ const ProductDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const candle = getCandleBySlug(slug || "");
   const [selectedSize, setSelectedSize] = useState(0);
+  const [selectedFragrance, setSelectedFragrance] = useState<string>(availableFragrances[0]);
+  const [selectedColour, setSelectedColour] = useState<string>(availableColours[0]);
   const [visible, setVisible] = useState(false);
   const { addItem, isLoading } = useCartStore();
 
@@ -62,11 +64,15 @@ const ProductDetail = () => {
       variantTitle: currentSize.label,
       price: { amount: String(currentSize.price), currencyCode: "EUR" },
       quantity: 1,
-      selectedOptions: [{ name: "Size", value: `${currentSize.label} · ${currentSize.weight}` }],
+      selectedOptions: [
+        { name: "Size", value: `${currentSize.label} · ${currentSize.weight}` },
+        { name: "Fragrance", value: selectedFragrance },
+        { name: "Colour", value: selectedColour },
+      ],
     });
 
     toast.success(`${candle.name} (${currentSize.label}) added to cart`, {
-      description: `€${currentSize.price.toFixed(2)} · ${currentSize.weight}`,
+      description: `€${currentSize.price.toFixed(2)} · ${selectedFragrance} · ${selectedColour}`,
     });
   };
 
@@ -123,9 +129,18 @@ const ProductDetail = () => {
             </h3>
             <div className="flex flex-wrap gap-2">
               {availableFragrances.map((f) => (
-                <span key={f} className="px-3 py-1.5 border border-border font-body text-xs text-muted-foreground">
+                <button
+                  key={f}
+                  type="button"
+                  onClick={() => setSelectedFragrance(f)}
+                  className={`px-3 py-1.5 border font-body text-xs transition-all ${
+                    selectedFragrance === f
+                      ? "border-foreground bg-foreground text-primary-foreground"
+                      : "border-border text-muted-foreground hover:border-foreground/40"
+                  }`}
+                >
                   {f}
-                </span>
+                </button>
               ))}
             </div>
           </div>
@@ -136,9 +151,18 @@ const ProductDetail = () => {
             </h3>
             <div className="flex flex-wrap gap-2">
               {availableColours.map((c) => (
-                <span key={c} className="px-3 py-1.5 border border-border font-body text-xs text-muted-foreground">
+                <button
+                  key={c}
+                  type="button"
+                  onClick={() => setSelectedColour(c)}
+                  className={`px-3 py-1.5 border font-body text-xs transition-all ${
+                    selectedColour === c
+                      ? "border-foreground bg-foreground text-primary-foreground"
+                      : "border-border text-muted-foreground hover:border-foreground/40"
+                  }`}
+                >
                   {c}
-                </span>
+                </button>
               ))}
             </div>
           </div>
