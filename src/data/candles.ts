@@ -1,6 +1,7 @@
 import daisyBud from "@/assets/glow-daisy-bud.jpg";
-import peonyM from "@/assets/glow-peony-m.jpg";
-import peonyL from "@/assets/glow-peony-l.jpg";
+import peonyM from "@/assets/peony-bud.jpeg";
+import peonyL from "@/assets/peony-bloom.jpeg";
+
 import tulipBouquet from "@/assets/glow-tulip-bouquet.jpg";
 import templeFlower from "@/assets/glow-temple-flower.jpg";
 import daisyFlower from "@/assets/glow-daisy-flower.jpg";
@@ -33,7 +34,9 @@ export interface CandleProduct {
   image: string;
   description: string;
   sizes: CandleSize[];
+  sizeImages?: Record<string, string>;
 }
+
 
 export const availableFragrances = [
   "Madagascar Vanilla",
@@ -70,25 +73,20 @@ export const candles: CandleProduct[] = [
     sizes: oneSize("One size", "3.3 x 4.5 cm", 1.5),
   },
   {
-    slug: "peony-flower-m",
-    name: "Peony Flower M",
-    notes: "4.5 x 9.6 cm",
+    slug: "peony-flower",
+    name: "Peony Flower",
+    notes: "Medium & Large",
     price: 3.5,
-    image: peonyM,
-    description:
-      "A medium peony flower candle with soft, sculpted petals. A romantic centrepiece for any quiet ritual.",
-    sizes: oneSize("Medium", "4.5 x 9.6 cm", 3.5),
-  },
-  {
-    slug: "peony-flower-l",
-    name: "Peony Flower L",
-    notes: "5.5 x 11.5 cm",
-    price: 5.5,
     image: peonyL,
     description:
-      "A large peony bloom, beautifully detailed and full of presence. Made with natural soy wax and a clean burning cotton wick.",
-    sizes: oneSize("Large", "5.5 x 11.5 cm", 5.5),
+      "A sculpted peony flower candle with soft, layered petals. Hand poured in natural soy wax with a clean cotton wick — choose medium for a delicate accent or large for a romantic centrepiece.",
+    sizes: [
+      { label: "M", weight: "4.5 x 9.6 cm", price: 3.5 },
+      { label: "L", weight: "5.5 x 11.5 cm", price: 5.5 },
+    ],
+    sizeImages: { M: peonyM, L: peonyL },
   },
+
   {
     slug: "tulip-flower-bouquet",
     name: "Tulip Flower Bouquet",
