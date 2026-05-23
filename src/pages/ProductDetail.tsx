@@ -48,7 +48,7 @@ const ProductDetail = () => {
           priceRange: {
             minVariantPrice: {
               amount: String(currentSize.price),
-              currencyCode: "USD",
+              currencyCode: "EUR",
             },
           },
           images: {
@@ -60,15 +60,16 @@ const ProductDetail = () => {
       },
       variantId: fakeVariantId,
       variantTitle: currentSize.label,
-      price: { amount: String(currentSize.price), currencyCode: "USD" },
+      price: { amount: String(currentSize.price), currencyCode: "EUR" },
       quantity: 1,
       selectedOptions: [{ name: "Size", value: `${currentSize.label} · ${currentSize.weight}` }],
     });
 
     toast.success(`${candle.name} (${currentSize.label}) added to cart`, {
-      description: `$${currentSize.price} · ${currentSize.weight}`,
+      description: `€${currentSize.price.toFixed(2)} · ${currentSize.weight}`,
     });
   };
+
 
   return (
     <main className="min-h-screen bg-background">
