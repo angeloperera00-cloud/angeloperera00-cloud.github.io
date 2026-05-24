@@ -88,6 +88,41 @@ Deno.serve(async (req) => {
         ],
       },
       phone_number_collection: { enabled: true },
+      shipping_options: [
+        {
+          shipping_rate_data: {
+            type: "fixed_amount",
+            fixed_amount: { amount: 500, currency: "eur" },
+            display_name: "Italy — Standard",
+            delivery_estimate: {
+              minimum: { unit: "business_day", value: 2 },
+              maximum: { unit: "business_day", value: 4 },
+            },
+          },
+        },
+        {
+          shipping_rate_data: {
+            type: "fixed_amount",
+            fixed_amount: { amount: 1200, currency: "eur" },
+            display_name: "Europe — Standard",
+            delivery_estimate: {
+              minimum: { unit: "business_day", value: 3 },
+              maximum: { unit: "business_day", value: 7 },
+            },
+          },
+        },
+        {
+          shipping_rate_data: {
+            type: "fixed_amount",
+            fixed_amount: { amount: 2500, currency: "eur" },
+            display_name: "Rest of World — Standard",
+            delivery_estimate: {
+              minimum: { unit: "business_day", value: 7 },
+              maximum: { unit: "business_day", value: 14 },
+            },
+          },
+        },
+      ],
       ...(body.customerEmail && { customer_email: body.customerEmail }),
       payment_intent_data: {
         description: `Glow Angel order (${body.items.reduce((s, i) => s + i.quantity, 0)} items)`,
