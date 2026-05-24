@@ -8,11 +8,13 @@ const environment: StripeEnv = clientToken?.startsWith("pk_test_") ? "sandbox" :
 let stripePromise: Promise<Stripe | null> | null = null;
 
 export function getStripe(): Promise<Stripe | null> {
-  if (!stripePromise) {
-    if (!clientToken) throw new Error("VITE_PAYMENTS_CLIENT_TOKEN is not set");
-    stripePromise = loadStripe(clientToken);
-  }
+  if (!clientToken) return Promise.resolve(null);
+  if (!stripePromise) stripePromise = loadStripe(clientToken);
   return stripePromise;
+}
+
+export function hasStripeToken(): boolean {
+  return Boolean(clientToken);
 }
 
 export function getStripeEnvironment(): StripeEnv {
