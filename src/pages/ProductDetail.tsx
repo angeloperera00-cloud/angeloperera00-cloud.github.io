@@ -35,6 +35,19 @@ const ProductDetail = () => {
 
   const currentSize = candle.sizes[selectedSize];
 
+  const colourSwatches: Record<string, { hex: string; blend: "multiply" | "color"; opacity: number }> = {
+    "Light Blue":  { hex: "#a8c8e0", blend: "multiply", opacity: 0.55 },
+    "Beige":       { hex: "#d8c4a3", blend: "multiply", opacity: 0.35 },
+    "White":       { hex: "#ffffff", blend: "multiply", opacity: 0 },
+    "Black":       { hex: "#1a1a1a", blend: "multiply", opacity: 0.75 },
+    "Green":       { hex: "#7a9a6e", blend: "multiply", opacity: 0.6 },
+    "Dark Blue":   { hex: "#2c3e60", blend: "multiply", opacity: 0.7 },
+    "Violet":      { hex: "#8a6fb0", blend: "multiply", opacity: 0.55 },
+    "Red":         { hex: "#b53a2e", blend: "multiply", opacity: 0.6 },
+    "Pink":        { hex: "#e8a8b8", blend: "multiply", opacity: 0.5 },
+  };
+  const currentSwatch = colourSwatches[selectedColour] ?? { hex: "#ffffff", blend: "multiply" as const, opacity: 0 };
+
   const handleAddToCart = async () => {
     // Build a mock ShopifyProduct-shaped object from local candle data
     // since the store doesn't have real Shopify products yet
