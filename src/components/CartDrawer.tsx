@@ -63,12 +63,12 @@ export const CartDrawer = () => {
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger asChild>
           <button
-            className="fixed top-6 right-6 z-50 flex items-center justify-center w-12 h-12 rounded-full bg-foreground/10 backdrop-blur-sm text-foreground hover:bg-foreground/20 transition-all"
+            className="fixed top-6 right-6 z-50 flex items-center justify-center w-12 h-12 rounded-full bg-glow-amber text-background shadow-lg ring-1 ring-glow-amber/40 hover:bg-glow-amber/90 transition-all"
             aria-label="Shopping cart"
           >
             <ShoppingCart className="w-5 h-5" />
             {totalItems > 0 && (
-              <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-accent text-accent-foreground text-[10px] font-body flex items-center justify-center">
+              <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-background text-glow-amber text-[10px] font-body font-semibold flex items-center justify-center ring-1 ring-glow-amber">
                 {totalItems}
               </span>
             )}
