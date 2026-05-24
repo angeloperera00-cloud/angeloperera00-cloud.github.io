@@ -28,7 +28,9 @@ const ScentCard = ({ candle, index }: { candle: typeof candles[0]; index: number
           <img
             src={candle.image}
             alt={candle.name}
-            loading="lazy"
+            loading={index < 4 ? "eager" : "lazy"}
+            fetchPriority={index < 4 ? "high" : "auto"}
+            decoding="async"
             width={640}
             height={800}
             className="w-full aspect-[4/5] object-cover transition-all duration-[1200ms] ease-out group-hover:scale-110"
