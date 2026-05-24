@@ -19,9 +19,28 @@ interface RequestBody {
   environment: StripeEnv;
 }
 
+const ALLOWED_RETURN_ORIGINS = new Set([
+  "https://glowangel.shop",
+  "https://www.glowangel.shop",
+  "https://glowangel.lovable.app",
+  "https://id-preview--69a76797-ebde-4f05-b72d-37978b5f94a5.lovable.app",
+  "http://localhost:5173",
+  "http://localhost:8080",
+]);
+
+function isAllowedReturnUrl(value: unknown): value is string {
+  if (typeof value !== "string") return false;
+  try {
+    const u = new URL(value);
+    return ALLOWED_RETURN_ORIGINS.has(u.origin);
+  } catch {
+    return false;
+  }
+}
+
 function validate(body: any): body is RequestBody {
   if (!body || !Array.isArray(body.items) || body.items.length === 0) return false;
-  if (typeof body.returnUrl !== "string") return false;
+  if (!isAllowedReturnUrl(body.returnUrl)) return false;
   if (body.environment !== "sandbox" && body.environment !== "live") return false;
   for (const item of body.items) {
     if (typeof item.priceId !== "string" || !/^[a-zA-Z0-9_-]+$/.test(item.priceId)) return false;
