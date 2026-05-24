@@ -35,6 +35,19 @@ const ProductDetail = () => {
 
   const currentSize = candle.sizes[selectedSize];
 
+  const colourSwatches: Record<string, { hex: string; blend: "multiply" | "color"; opacity: number }> = {
+    "Light Blue":  { hex: "#a8c8e0", blend: "multiply", opacity: 0.55 },
+    "Beige":       { hex: "#d8c4a3", blend: "multiply", opacity: 0.35 },
+    "White":       { hex: "#ffffff", blend: "multiply", opacity: 0 },
+    "Black":       { hex: "#1a1a1a", blend: "multiply", opacity: 0.75 },
+    "Green":       { hex: "#7a9a6e", blend: "multiply", opacity: 0.6 },
+    "Dark Blue":   { hex: "#2c3e60", blend: "multiply", opacity: 0.7 },
+    "Violet":      { hex: "#8a6fb0", blend: "multiply", opacity: 0.55 },
+    "Red":         { hex: "#b53a2e", blend: "multiply", opacity: 0.6 },
+    "Pink":        { hex: "#e8a8b8", blend: "multiply", opacity: 0.5 },
+  };
+  const currentSwatch = colourSwatches[selectedColour] ?? { hex: "#ffffff", blend: "multiply" as const, opacity: 0 };
+
   const handleAddToCart = async () => {
     // Build a mock ShopifyProduct-shaped object from local candle data
     // since the store doesn't have real Shopify products yet
@@ -95,13 +108,24 @@ const ProductDetail = () => {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <img
-            src={candle.sizeImages?.[currentSize.label] ?? candle.image}
-            alt={`${candle.name} ${currentSize.label}`}
-            width={640}
-            height={800}
-            className="w-full max-w-lg mx-auto object-cover shadow-2xl transition-opacity duration-500"
-          />
+          <div className="relative w-full max-w-lg mx-auto shadow-2xl overflow-hidden">
+            <img
+              src={candle.sizeImages?.[currentSize.label] ?? candle.image}
+              alt={`${candle.name} ${currentSize.label} in ${selectedColour}`}
+              width={640}
+              height={800}
+              className="w-full object-cover block"
+            />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 transition-opacity duration-500"
+              style={{
+                backgroundColor: currentSwatch.hex,
+                mixBlendMode: currentSwatch.blend,
+                opacity: currentSwatch.opacity,
+              }}
+            />
+          </div>
 
         </div>
 
@@ -156,12 +180,17 @@ const ProductDetail = () => {
                   key={c}
                   type="button"
                   onClick={() => setSelectedColour(c)}
-                  className={`px-3 py-1.5 border font-body text-xs transition-all ${
+                  className={`px-3 py-1.5 border font-body text-xs transition-all inline-flex items-center gap-2 ${
                     selectedColour === c
                       ? "border-foreground bg-foreground text-primary-foreground"
                       : "border-border text-muted-foreground hover:border-foreground/40"
                   }`}
                 >
+                  <span
+                    aria-hidden
+                    className="w-3 h-3 rounded-full border border-foreground/20"
+                    style={{ backgroundColor: colourSwatches[c]?.hex ?? "#ffffff" }}
+                  />
                   {c}
                 </button>
               ))}
