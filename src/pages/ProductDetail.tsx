@@ -108,13 +108,24 @@ const ProductDetail = () => {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <img
-            src={candle.sizeImages?.[currentSize.label] ?? candle.image}
-            alt={`${candle.name} ${currentSize.label}`}
-            width={640}
-            height={800}
-            className="w-full max-w-lg mx-auto object-cover shadow-2xl transition-opacity duration-500"
-          />
+          <div className="relative w-full max-w-lg mx-auto shadow-2xl overflow-hidden">
+            <img
+              src={candle.sizeImages?.[currentSize.label] ?? candle.image}
+              alt={`${candle.name} ${currentSize.label} in ${selectedColour}`}
+              width={640}
+              height={800}
+              className="w-full object-cover block"
+            />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 transition-opacity duration-500"
+              style={{
+                backgroundColor: currentSwatch.hex,
+                mixBlendMode: currentSwatch.blend,
+                opacity: currentSwatch.opacity,
+              }}
+            />
+          </div>
 
         </div>
 
