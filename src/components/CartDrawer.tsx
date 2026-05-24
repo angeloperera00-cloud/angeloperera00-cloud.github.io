@@ -43,7 +43,7 @@ export const CartDrawer = () => {
         for (const o of item.selectedOptions) meta[o.name.toLowerCase()] = o.value;
         return { priceId, quantity: item.quantity, meta };
       })
-      .filter((x): x is CheckoutLineItem => x !== null);
+      .filter((x) => x !== null) as CheckoutLineItem[];
   }, [items]);
 
   const handleCheckout = () => {
