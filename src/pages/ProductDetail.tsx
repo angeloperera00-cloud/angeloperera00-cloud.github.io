@@ -156,17 +156,12 @@ const ProductDetail = () => {
                   key={c}
                   type="button"
                   onClick={() => setSelectedColour(c)}
-                  className={`px-3 py-1.5 border font-body text-xs transition-all inline-flex items-center gap-2 ${
+                  className={`px-3 py-1.5 border font-body text-xs transition-all ${
                     selectedColour === c
                       ? "border-foreground bg-foreground text-primary-foreground"
                       : "border-border text-muted-foreground hover:border-foreground/40"
                   }`}
                 >
-                  <span
-                    aria-hidden
-                    className="w-3 h-3 rounded-full border border-foreground/20"
-                    style={{ backgroundColor: colourSwatches[c]?.hex ?? "#ffffff" }}
-                  />
                   {c}
                 </button>
               ))}
