@@ -9,7 +9,7 @@ const ScentCard = ({ candle, index }: { candle: typeof candles[0]; index: number
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => { if (entry.isIntersecting) setVisible(true); },
-      { threshold: 0.2 }
+      { threshold: 0.01, rootMargin: "400px 0px" }
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
