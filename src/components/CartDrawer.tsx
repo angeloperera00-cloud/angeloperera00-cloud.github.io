@@ -1,22 +1,31 @@
 import { useState, useEffect } from "react";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { ShoppingCart, Minus, Plus, Trash2, ExternalLink, Loader2 } from "lucide-react";
+import { ShoppingCart, Minus, Plus, Trash2, Loader2 } from "lucide-react";
 import { useCartStore } from "@/stores/cartStore";
+
+const WHATSAPP_NUMBER = "393475777866";
 
 export const CartDrawer = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { items, isLoading, isSyncing, updateQuantity, removeItem, getCheckoutUrl, syncCart } = useCartStore();
+  const { items, isLoading, isSyncing, updateQuantity, removeItem, syncCart } = useCartStore();
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
   const totalPrice = items.reduce((sum, item) => sum + (parseFloat(item.price.amount) * item.quantity), 0);
+  const currency = items[0]?.price.currencyCode || "EUR";
 
   useEffect(() => { if (isOpen) syncCart(); }, [isOpen, syncCart]);
 
   const handleCheckout = () => {
-    const checkoutUrl = getCheckoutUrl();
-    if (checkoutUrl) {
-      window.open(checkoutUrl, '_blank');
-      setIsOpen(false);
-    }
+    if (items.length === 0) return;
+    const lines = items.map((item) => {
+      const opts = item.selectedOptions.map((o) => o.value).join(" · ");
+      const lineTotal = (parseFloat(item.price.amount) * item.quantity).toFixed(2);
+      return `• ${item.product.node.title} (${opts}) ×${item.quantity} — ${item.price.currencyCode} ${lineTotal}`;
+    }).join("\n");
+    const message =
+      `Hi! I'd like to order from Glow ✨\n\n${lines}\n\nTotal: ${currency} ${totalPrice.toFixed(2)}`;
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+    setIsOpen(false);
   };
 
   return (
