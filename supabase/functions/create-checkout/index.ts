@@ -32,7 +32,10 @@ function isAllowedReturnUrl(value: unknown): value is string {
   if (typeof value !== "string") return false;
   try {
     const u = new URL(value);
-    return ALLOWED_RETURN_ORIGINS.has(u.origin);
+    if (ALLOWED_RETURN_ORIGINS.has(u.origin)) return true;
+    // Allow Lovable preview subdomains
+    if (/\.lovableproject\.com$/.test(u.hostname) || /\.lovable\.app$/.test(u.hostname)) return true;
+    return false;
   } catch {
     return false;
   }
