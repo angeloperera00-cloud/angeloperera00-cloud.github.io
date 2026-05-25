@@ -11,9 +11,13 @@ import roseBud from "@/assets/glow-rose-bud.jpg";
 import yarnBall from "@/assets/glow-yarn-ball.jpg";
 import swirlingWave from "@/assets/glow-swirling-wave.jpg";
 import heartBear from "@/assets/glow-heart-bear.jpg";
-import angelGirl from "@/assets/glow-angel-girl.jpg";
-import angelBoy from "@/assets/glow-angel-boy.jpg";
-import angelBless from "@/assets/glow-angel-bless.jpg";
+// Reassigned mappings per product:
+// Prayer Girl Angel = pink kneeling girl (was angel-boy image)
+// Prayer Boy Angel  = cream kneeling boy (was angel-bless image)
+// Bless Angel       = standing cream angel (was angel-girl image)
+import angelGirl from "@/assets/glow-angel-boy.jpg";
+import angelBoy from "@/assets/glow-angel-bless.jpg";
+import angelBless from "@/assets/glow-angel-girl.jpg";
 import bubbleSmall from "@/assets/glow-bubble-small.jpg";
 import bubble from "@/assets/glow-bubble.jpg";
 import heart from "@/assets/glow-heart.jpg";
