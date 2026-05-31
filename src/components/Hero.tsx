@@ -10,7 +10,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative h-[100svh] w-full overflow-hidden">
+    <section className="relative h-[100svh] w-full overflow-hidden bg-[#1a0f08]">
       <img
         src={heroImage}
         alt="Glow luxury candles glowing in warm amber light"
