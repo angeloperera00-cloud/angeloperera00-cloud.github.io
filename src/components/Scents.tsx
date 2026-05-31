@@ -3,51 +3,31 @@ import { Link } from "react-router-dom";
 import { candles } from "@/data/candles";
 
 const ScentCard = ({ candle, index }: { candle: typeof candles[0]; index: number }) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
-      { threshold: 0.01, rootMargin: "400px 0px" }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <div
-      ref={ref}
-      className={`transition-all duration-700 ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-      }`}
-      style={{ transitionDelay: `${index * 150}ms` }}
-    >
-      <Link to={`/scent/${candle.slug}`} className="group block cursor-pointer">
-        <div className="relative overflow-hidden mb-5 rounded-sm bg-muted/30 shadow-[0_10px_40px_-15px_hsl(var(--foreground)/0.25)] transition-shadow duration-700 group-hover:shadow-[0_25px_60px_-15px_hsl(var(--foreground)/0.45)]">
-          <img
-            src={candle.image}
-            alt={candle.name}
-            loading={index < 4 ? "eager" : "lazy"}
-            fetchPriority={index < 4 ? "high" : "auto"}
-            decoding="async"
-            width={640}
-            height={800}
-            className="w-full aspect-[4/5] object-cover transition-all duration-[1200ms] ease-out group-hover:scale-110"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100" />
-        </div>
-        <h3 className="font-heading text-2xl font-light text-foreground mb-1">
-          {candle.name}
-        </h3>
-        <p className="body-refined text-sm text-muted-foreground mb-2">
-          {candle.notes}
-        </p>
-        <p className="font-body text-sm tracking-widest text-accent">
-          €{candle.price.toFixed(2)}
-        </p>
-      </Link>
-    </div>
+    <Link to={`/scent/${candle.slug}`} className="group block cursor-pointer">
+      <div className="relative overflow-hidden mb-5 rounded-sm bg-muted/30 shadow-[0_10px_40px_-15px_hsl(var(--foreground)/0.25)] transition-shadow duration-700 group-hover:shadow-[0_25px_60px_-15px_hsl(var(--foreground)/0.45)]">
+        <img
+          src={candle.image}
+          alt={candle.name}
+          loading={index < 6 ? "eager" : "lazy"}
+          fetchPriority={index < 4 ? "high" : "auto"}
+          decoding="async"
+          width={640}
+          height={800}
+          className="w-full aspect-[4/5] object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100" />
+      </div>
+      <h3 className="font-heading text-2xl font-light text-foreground mb-1">
+        {candle.name}
+      </h3>
+      <p className="body-refined text-sm text-muted-foreground mb-2">
+        {candle.notes}
+      </p>
+      <p className="font-body text-sm tracking-widest text-accent">
+        €{candle.price.toFixed(2)}
+      </p>
+    </Link>
   );
 };
 
