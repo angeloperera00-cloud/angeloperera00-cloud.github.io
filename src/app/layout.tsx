@@ -27,7 +27,7 @@ export const viewport: Viewport = {
 
 /* Runs before first paint: the hero starts in its pre-animation state on the
    home page only; a fallback reveals everything if JavaScript stalls. */
-const INTRO = `(function(d){var r=d.documentElement,p=location.pathname;r.classList.add('js');if(/^\\/it(\\/|$)/.test(p))r.lang='it';if((p==='/'||p==='/it'||p==='/it/')&&!matchMedia('(prefers-reduced-motion: reduce)').matches)r.classList.add('intro');setTimeout(function(){r.classList.remove('intro')},2600)})(document)`;
+const INTRO = `(function(d){var r=d.documentElement,p=location.pathname;r.classList.add('js');var keep=0;try{keep=!!sessionStorage.getItem('ap-lang-view')}catch(e){}if(keep&&'scrollRestoration' in history)history.scrollRestoration='manual';if(/^\\/it(\\/|$)/.test(p))r.lang='it';if(!keep&&(p==='/'||p==='/it'||p==='/it/')&&!matchMedia('(prefers-reduced-motion: reduce)').matches)r.classList.add('intro');setTimeout(function(){r.classList.remove('intro')},2600)})(document)`;
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (

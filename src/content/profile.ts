@@ -5,7 +5,7 @@ import type { IconName } from '@/components/icons/sprite';
    ========================================================================== */
 
 export const hero = {
-  eyebrow: 'iOS. WEB. GAME.',
+  eyebrow: 'Software Engineer',
   titleLines: ['Developer', 'Building', 'Digital', 'Experiences'],
   roles: ['iOS Engineer', 'Full-Stack Engineer'],
   rolesLine2: 'Content Creator & Digital Marketer',

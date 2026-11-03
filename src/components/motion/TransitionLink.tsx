@@ -2,7 +2,8 @@
 
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { useEffect, type ComponentProps, type MouseEvent } from 'react';
+import { useEffect, useRef, type ComponentProps, type MouseEvent } from 'react';
+import { jumpTo, restoreView } from '@/lib/viewKeeper';
 
 /* ==========================================================================
    Client navigation wrapped in the View Transitions API, so elements that
@@ -12,10 +13,42 @@ import { useEffect, type ComponentProps, type MouseEvent } from 'react';
 
 let pending: (() => void) | null = null;
 
-/** Mount once (root layout): resolves the transition when the new route commits. */
+/** Mount once (root layout): resolves the transition when the new route commits,
+    opens every new page at the top (or at its #section), and keeps the same
+    spot after a language switch. Back/forward keeps the browser's position. */
 export function RouteTransitionListener() {
   const pathname = usePathname();
+  const first = useRef(true);
+  const popped = useRef(false);
+
   useEffect(() => {
+    const onPop = () => { popped.current = true; };
+    addEventListener('popstate', onPop);
+    return () => removeEventListener('popstate', onPop);
+  }, []);
+
+  useEffect(() => {
+    const toTarget = () => {
+      const id = decodeURIComponent(location.hash.slice(1));
+      const el = id ? document.getElementById(id) : null;
+      jumpTo(el ? el.getBoundingClientRect().top + scrollY : 0);
+    };
+    if (first.current) {
+      first.current = false;
+      if (!restoreView()) {
+        // A fresh visit (link click, not reload or back/forward) always opens at the top.
+        const nav = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
+        if ((!nav || nav.type === 'navigate') && !location.hash) {
+          jumpTo(0);
+          requestAnimationFrame(() => jumpTo(0));
+        }
+      }
+    } else if (popped.current) {
+      popped.current = false;
+    } else {
+      toTarget();
+      requestAnimationFrame(toTarget);
+    }
     // Rendering is paused during the transition's update phase, so resolve
     // directly (no requestAnimationFrame): the new route is already committed.
     if (!pending) return;

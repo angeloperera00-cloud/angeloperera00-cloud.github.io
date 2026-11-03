@@ -8,6 +8,7 @@ import { navItems, site } from '@/content/site';
 import { pad2 } from '@/lib/format';
 import { lp, LANGS, LANG_LABEL, type Lang } from '@/i18n';
 import { t } from '@/i18n/ui';
+import { saveView } from '@/lib/viewKeeper';
 
 /* Sticky navigation: adapts its tone to the section underneath, tracks the
    active section on the home page, maps sub-pages to their section, and
@@ -107,7 +108,23 @@ export default function Nav({ lang, path, hideWriting = false }: { lang: Lang; p
   const Switch = ({ className }: { className: string }) => (
     <div className={className} role="group" aria-label={s.language}>
       {LANGS.map((l) => (
-        <a key={l} href={langHref(l)} hrefLang={l} lang={l} aria-current={l === lang ? 'true' : undefined} aria-label={LANG_LABEL[l]}>
+        <a
+          key={l}
+          href={langHref(l)}
+          hrefLang={l}
+          lang={l}
+          aria-current={l === lang ? 'true' : undefined}
+          aria-label={LANG_LABEL[l]}
+          onClick={(e) => {
+            if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+            e.preventDefault();
+            if (l === lang) return;
+            const to = lp(l, base);
+            saveView(to);
+            const go = (window as Window & { __go?: (p: string) => void }).__go;
+            if (go) go(to); else location.assign(to);
+          }}
+        >
           {l.toUpperCase()}
         </a>
       ))}

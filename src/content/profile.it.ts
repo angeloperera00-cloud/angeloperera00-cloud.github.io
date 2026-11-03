@@ -5,7 +5,7 @@
    ========================================================================== */
 
 export const heroIt = {
-  eyebrow: 'iOS. WEB. GAME.',
+  eyebrow: 'Software Engineer',
   titleLines: ['Sviluppo', 'Esperienze', 'Digitali', 'Memorabili'],
   roles: ['iOS Engineer', 'Full-Stack Engineer'],
   rolesLine2: 'Content Creator e Digital Marketer',
