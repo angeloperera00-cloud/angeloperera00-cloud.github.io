@@ -63,6 +63,14 @@ export const projects: Project[] = [
     caseStudy: {
       overview:
         'MTLab is a virtual mechanical engineering laboratory. It uses interactive 3D simulations to teach how industrial machines work, starting with the lathe, for mechanical engineering students, engineering colleges, industrial training institutes and technical educators.',
+      problem: {
+        paragraphs: [
+          "Students learning how industrial machines work often get little hands-on time with real equipment: machines are expensive, shared and not always safe for beginners. From theory alone, it is hard to picture how parts like the chuck and the carriage actually move.",
+        ],
+      },
+      role: {
+        paragraphs: ["Developer on the team. I wrote the app's code: the interactive 3D lathe, the machine theory screens and the AR mode that places the machine in the room."],
+      },
       solutions: {
         bullets: [
           'Interactive 3D lathe simulation.',
@@ -114,6 +122,14 @@ export const projects: Project[] = [
     caseStudy: {
       overview:
         'TennisLand is a 3D tennis game for Apple TV, played on the big screen with the Siri Remote. Beyond matches, it brings challenges, tournaments and players together in one place.',
+      problem: {
+        paragraphs: [
+          "Tennis games usually need a game controller or a phone screen. TennisLand set out to bring a full 3D tennis match to the living-room TV, playable with just the Siri Remote that comes with every Apple TV.",
+        ],
+      },
+      role: {
+        paragraphs: ["Developer on the team. I coded the game: the 3D court and stadium, the Siri Remote controls, and the menus for challenges, tournaments and players."],
+      },
       solutions: {
         bullets: [
           'Full 3D stadium and court built for the TV screen.',
@@ -170,6 +186,9 @@ export const projects: Project[] = [
           'Developed together with members of CIVES, whose feedback shaped how distance is communicated and how the two modes work. Created for the Swift Student Challenge 2025/26.',
         ],
       },
+      role: {
+        paragraphs: ["Developer on the team. I wrote the code for both modes: LiDAR distance sensing with haptic and sound feedback, and the camera label reader."],
+      },
       solutions: {
         bullets: [
           'Scan Space: LiDAR depth sensing measures the distance to the nearest obstacle in real time.',
@@ -214,6 +233,14 @@ export const projects: Project[] = [
     caseStudy: {
       overview:
         'EyeCheck helps people understand their vision in a fun, interactive way. It places a real-size eye chart and virtual glasses in the room with augmented reality, runs a visual test and a colour perception test, and explains conditions such as myopia with interactive diagrams. It is built for everyone and is clearly framed as an educational tool, not a substitute for a professional eye exam.',
+      problem: {
+        paragraphs: [
+          "Many people only think about their eyesight at an eye exam, and terms like myopia are hard to picture. There was room for a friendly, interactive way to try a vision test at home and understand what it means, while making clear it does not replace a professional exam.",
+        ],
+      },
+      role: {
+        paragraphs: ["Developer on the team. I coded the AR eye chart and glasses placement, the visual and colour perception tests, and the vision analysis screens."],
+      },
       solutions: {
         bullets: [
           'Visual test with a Snellen eye chart placed in AR, and a slider to simulate blur.',
@@ -259,8 +286,13 @@ export const projects: Project[] = [
     caseStudy: {
       overview:
         'StikAR lets people place virtual stickers in real locations and find them again later. It is built around simple, playful spatial interaction and a shared experience: sign in with just a username, drop stickers into the world, and return to a zone to see them reappear.',
+      problem: {
+        paragraphs: [
+          "Sharing a moment usually means a post that disappears in a feed. StikAR asks a different question: what if you could leave something in the place itself, for friends or strangers to discover when they get there?",
+        ],
+      },
       role: {
-        paragraphs: ['Built as a five-person team project. I am one of the credited contributors on the App Store listing.'],
+        paragraphs: ["Developer on a five-person team, credited on the App Store listing. I wrote code for the AR sticker experience: placing stickers in real places, reloading them in a zone, and moving and resizing them."],
       },
       solutions: {
         bullets: [
@@ -307,6 +339,14 @@ export const projects: Project[] = [
       { device: 'iphone', width: 286, height: 598, src: '/images/projects/wanderly/screen-6.webp', alt: 'Wanderly Profile with travel stats, badges and a digital passport', caption: 'Badges and a digital passport' },
     ],
     caseStudy: {
+      problem: {
+        paragraphs: [
+          "Planning a trip often means jumping between search, maps, notes and social media. Wanderly brings discovering places, saving ideas and keeping track of where you have been into one app.",
+        ],
+      },
+      role: {
+        paragraphs: ["Developer on the team. I coded the app's screens and features: Discover, Explore by country, Saved places and the Profile with badges and a digital passport."],
+      },
       solutions: {
         bullets: [
           'Discover tab with destination search, category filters (beaches, mountains, cultural), trending and top-rated places.',
@@ -358,6 +398,11 @@ export const projects: Project[] = [
       role: {
         paragraphs: ['Solo project: I designed, built and published the app on the App Store under my own developer account.'],
       },
+      problem: {
+        paragraphs: [
+          "Most workout apps give you the same plan whether you slept badly or your legs are still sore. People who train seriously need to know which muscles are recovered and how their posture and symmetry change, without sending body photos to a server.",
+        ],
+      },
       solutions: {
         bullets: [
           'Camera body scan with Vision: posture score, shoulder alignment, hip tilt, knee and ankle position, and muscle symmetry.',
@@ -406,6 +451,11 @@ export const projects: Project[] = [
       role: {
         paragraphs: ['Solo project: designed, built and published on the App Store under my own developer account.'],
       },
+      problem: {
+        paragraphs: [
+          "Geography quizzes often feel slow or like homework. Country Dash makes learning countries quick and addictive: 5 seconds per question and short rounds you can play in a spare minute.",
+        ],
+      },
       solutions: {
         bullets: [
           'A 5-second timer on every question.',
@@ -443,6 +493,14 @@ export const projects: Project[] = [
     caseStudy: {
       overview:
         'Poop Run is an endless 3D runner. The player races down a tree-lined road, jumping and switching lanes to dodge obstacles while the score and speed keep going up.',
+      problem: {
+        paragraphs: [
+          "Endless runners are perfect for quick sessions, but many of them feel the same. Poop Run gives the genre a funny theme and simple controls: run, jump and dodge while the speed keeps climbing.",
+        ],
+      },
+      role: {
+        paragraphs: ["Developer on the team. I coded the game: the endless road, lane switching and jumping, the obstacles, and the score and speed system."],
+      },
       solutions: {
         bullets: [
           'Endless 3D road with trees and street lamps.',
@@ -482,6 +540,14 @@ export const projects: Project[] = [
     caseStudy: {
       overview:
         'CoachPlan is built for personal trainers. From one home screen the trainer picks a client and creates either a workout plan or a weekly nutrition plan, then exports it to share with the client.',
+      problem: {
+        paragraphs: [
+          "Personal trainers often build workout and nutrition plans in spreadsheets, notes or chat messages, which is slow and easy to mix up between clients. CoachPlan keeps both plans for every client in one place and exports them in one tap.",
+        ],
+      },
+      role: {
+        paragraphs: ["Developer on the team. I coded the app: client selection, the workout plan builder, the weekly nutrition grid and export."],
+      },
       solutions: {
         bullets: [
           'Client selector on every screen, so each plan belongs to one client.',

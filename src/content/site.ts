@@ -38,7 +38,7 @@ export const site = {
    * render as clearly-marked drafts. Set to false before launch: empty slots and
    * unwritten case-study sections then disappear instead of showing as drafts.
    */
-  showPlaceholders: true,
+  showPlaceholders: false,
 
   /** "View certificate" links. */
   certificates: {
