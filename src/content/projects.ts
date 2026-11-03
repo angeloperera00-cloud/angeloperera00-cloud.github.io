@@ -473,11 +473,11 @@ export const projects: Project[] = [
     ],
     icon: { src: '/images/projects/coachplan/icon.png', alt: 'CoachPlan app icon: a white dumbbell over a green leaf' },
     accent: '#2FA866',
-    cover: { src: '/images/projects/coachplan/cover.webp', alt: 'Three CoachPlan screens: home, workout plan and nutrition plan' },
+    cover: { src: '/images/projects/coachplan/cover.webp', alt: 'Three CoachPlan iPhone screens on a green background: home, workout plan and nutrition plan' },
     screenshots: [
-      { device: 'poster', width: 444, height: 814, src: '/images/projects/coachplan/screen-1.webp', alt: 'CoachPlan home with the selected client and two actions: create a workout plan or a nutrition plan', caption: 'Pick a client, then create' },
-      { device: 'poster', width: 440, height: 814, src: '/images/projects/coachplan/screen-2.webp', alt: 'Workout plan for Monday with exercises, sets, reps, rest and photos', caption: 'Exercises, sets, reps and rest' },
-      { device: 'poster', width: 480, height: 814, src: '/images/projects/coachplan/screen-3.webp', alt: 'Weekly nutrition plan grid with meals from breakfast to before bed for each day', caption: 'A full week of meals' },
+      { device: 'poster', width: 651, height: 1201, src: '/images/projects/coachplan/screen-1.webp', alt: 'CoachPlan home with the selected client and two actions: create a workout plan or a nutrition plan', caption: 'Pick a client, then create' },
+      { device: 'poster', width: 645, height: 1207, src: '/images/projects/coachplan/screen-2.webp', alt: 'Workout plan for Monday with exercises, sets, reps, rest and photos', caption: 'Exercises, sets, reps and rest' },
+      { device: 'poster', width: 697, height: 1207, src: '/images/projects/coachplan/screen-3.webp', alt: 'Weekly nutrition plan grid with meals from breakfast to before bed for each day', caption: 'A full week of meals' },
     ],
     caseStudy: {
       overview:
