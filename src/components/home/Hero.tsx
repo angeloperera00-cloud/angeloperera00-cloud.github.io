@@ -4,7 +4,6 @@ import HeroMotion from '@/components/motion/HeroMotion';
 import CopyButton from '@/components/ui/CopyButton';
 import CvMenu from './CvMenu';
 import { site } from '@/content/site';
-import { telHref } from '@/lib/format';
 import { getProfile } from '@/lib/profile';
 import { lp, type Lang } from '@/i18n';
 import { t } from '@/i18n/ui';
@@ -45,12 +44,6 @@ export default function Hero({ lang }: { lang: Lang }) {
             </Link>
             <CvMenu lang={lang} />
           </div>
-          <p className="hero__status">
-            <span className="pulse" aria-hidden="true" />
-            {hero.availability[0]}
-            <br />
-            {hero.availability[1]}
-          </p>
         </div>
 
         <div className="hero__figure">
@@ -88,11 +81,6 @@ export default function Hero({ lang }: { lang: Lang }) {
               <Icon name="i-mail" />
               <a href={`mailto:${site.email}`} data-copy-src>{site.email}</a>
               <CopyButton value={site.email} label={s.copyEmail} />
-            </li>
-            <li>
-              <Icon name="i-phone" />
-              <a href={telHref(site.phone)} data-copy-src>{site.phone}</a>
-              <CopyButton value={site.phone} label={s.copyPhone} />
             </li>
           </ul>
         </aside>
