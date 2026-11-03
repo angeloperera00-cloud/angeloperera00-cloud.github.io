@@ -37,7 +37,7 @@ export const projects: Project[] = [
     ],
     icon: { src: '/images/projects/mtlab/icon.png', alt: 'MTLab app icon' },
     accent: '#3A4DB0',
-    cover: { src: '/images/projects/mtlab/cover.webp', alt: 'A 3D lathe machine placed in augmented reality on a tiled floor' },
+    cover: { src: '/images/projects/mtlab/cover.webp', alt: 'Two MTLab iPad screens: the 3D lathe placed in AR on a tiled floor, and the Manual Machines list' },
     year: '2026',
     screenshots: [
       {
@@ -248,7 +248,7 @@ export const projects: Project[] = [
     ],
     icon: { src: '/images/projects/stikar/icon.png', alt: 'StikAR app icon' },
     accent: '#6CC24A',
-    cover: { src: '/images/projects/stikar/cover.webp', alt: 'StikAR pixel-art logo with the line Drop stickers into the real world' },
+    cover: { src: '/images/projects/stikar/cover.webp', alt: 'Three StikAR App Store screenshots: choosing stickers, connecting with people nearby and finding memories left by others' },
     year: '2026',
     screenshots: [
       { device: 'poster', width: 852, height: 1124, src: '/images/projects/stikar/screen-1.webp', alt: 'StikAR title screen: Drop stickers into the real world', caption: 'Drop stickers into the real world' },
@@ -435,7 +435,7 @@ export const projects: Project[] = [
     tech: [],
     icon: { src: '/images/projects/poop-run/icon.png', alt: 'Poop Run game icon' },
     accent: '#2C63E0',
-    cover: { src: '/images/projects/poop-run/cover.webp', alt: 'Poop Run gameplay: a runner on a road lined with trees and lamp posts' },
+    cover: { src: '/images/projects/poop-run/cover.webp', alt: 'The Poop Run logo between two gameplay screens of the runner on a tree-lined road' },
     screenshots: [
       { device: 'poster', width: 1254, height: 1254, src: '/images/projects/poop-run/screen-1.webp', alt: 'The runner jumping over obstacles, score 95 and speed 14', caption: 'Jump the obstacles' },
       { device: 'poster', width: 1254, height: 1254, src: '/images/projects/poop-run/screen-2.webp', alt: 'The runner on the road with obstacles ahead, score 61 and speed 13', caption: 'Score and speed keep climbing' },
