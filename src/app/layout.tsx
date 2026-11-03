@@ -15,7 +15,13 @@ export const metadata: Metadata = {
   description: site.description,
   openGraph: { type: 'website', title: site.title, description: site.description, images: ['/images/og.jpg'] },
   twitter: { card: 'summary_large_image' },
-  icons: { icon: '/icons/favicon.svg' },
+  icons: {
+    icon: [
+      { url: '/icons/favicon-ap.svg', type: 'image/svg+xml' },
+      { url: '/icons/favicon-ap-32.png', type: 'image/png', sizes: '32x32' },
+    ],
+    apple: '/icons/apple-touch-icon.png',
+  },
 };
 
 export const viewport: Viewport = {
