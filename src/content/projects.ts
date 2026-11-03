@@ -382,7 +382,7 @@ export const projects: Project[] = [
     ],
     icon: { src: '/images/projects/vfit/icon.png', alt: 'V Fit app icon' },
     accent: '#C6F432',
-    cover: { src: '/images/projects/vfit/cover-2.webp', alt: 'Five V Fit App Store screenshots fanned on a dark lime background: daily plan, workout, recovery, body twin and posture' },
+    cover: { src: '/images/projects/vfit/cover-3.webp', alt: 'Five V Fit App Store screenshots: daily plan, workout, body twin, recovery and posture' },
     year: '2026',
     screenshots: [
       { device: 'poster', width: 386, height: 868, src: '/images/projects/vfit/screen-1.webp', alt: 'V Fit home with today\'s plan and recovery, sleep, soreness and hydration overview', caption: 'Your training, adapted daily' },
