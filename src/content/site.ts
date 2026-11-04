@@ -6,7 +6,7 @@
 
 export const site = {
   name: 'Angelo Perera',
-  title: 'Angelo Perera — iOS, Web & Game Developer',
+  title: 'angeloperera - software engineer',
   description:
     'Angelo Perera is an iOS, web and game developer in Naples, Italy, building apps with Swift, SwiftUI, ARKit, RealityKit and Unity. Available for freelance and full-time work.',
   /** Set NEXT_PUBLIC_SITE_URL in your host (e.g. https://yourdomain.com) for absolute social/sitemap URLs. */
