@@ -24,10 +24,12 @@ interface Props {
   /** Keep the active filter in the URL (?category=…&q=…). */
   syncUrl?: boolean;
   heading?: string;
+  /** Home page: the full list to filter from (featured included), driven by the "What I do" cards. */
+  allProjects?: Project[];
   lang: Lang;
 }
 
-export default function ProjectGallery({ projects, numbers, limit, viewAllHref, totalCount, withSearch, syncUrl, heading, lang }: Props) {
+export default function ProjectGallery({ projects, numbers, limit, viewAllHref, totalCount, withSearch, syncUrl, heading, allProjects, lang }: Props) {
   const s = t(lang).projects;
   const [filter, setFilter] = useState<Filter>('all');
   const [q, setQ] = useState('');
@@ -49,15 +51,33 @@ export default function ProjectGallery({ projects, numbers, limit, viewAllHref, 
     history.replaceState(history.state, '', qs ? `?${qs}` : location.pathname);
   }, [filter, q, syncUrl]);
 
+  /* On the home page the "What I do" cards (and these filters) switch to the full list. */
+  useEffect(() => {
+    if (!allProjects) return;
+    const on = (e: Event) => { setFilter((e as CustomEvent<Filter>).detail); setQ(''); };
+    addEventListener('projects:filter', on);
+    return () => removeEventListener('projects:filter', on);
+  }, [allProjects]);
+  useEffect(() => {
+    if (!allProjects) return;
+    const sec = document.getElementById('projects');
+    if (sec) sec.dataset.filter = filter;
+    dispatchEvent(new CustomEvent('projects:filtered', { detail: filter }));
+  }, [filter, allProjects]);
+
+  const filtering = Boolean(allProjects) && filter !== 'all';
+  const source = filtering && allProjects ? allProjects : projects;
+
   const counts = useMemo(() => {
-    const c: Record<Filter, number> = { all: projects.filter((p) => !p.placeholder).length, ios: 0, spatial: 0, ai: 0, web: 0 };
-    projects.forEach((p) => p.categories.forEach((cat) => { c[cat] += 1; }));
+    const base = allProjects ?? projects;
+    const c: Record<Filter, number> = { all: base.filter((p) => !p.placeholder).length, ios: 0, spatial: 0, ai: 0, web: 0, games: 0 };
+    base.forEach((p) => p.categories.forEach((cat) => { c[cat] += 1; }));
     return c;
-  }, [projects]);
+  }, [projects, allProjects]);
 
   const results = useMemo(() => {
     const needle = q.trim().toLowerCase();
-    return projects.filter((p) => {
+    return source.filter((p) => {
       if (filter !== 'all' && !p.categories.includes(filter)) return false;
       if (needle) {
         if (p.placeholder) return false;
@@ -66,9 +86,9 @@ export default function ProjectGallery({ projects, numbers, limit, viewAllHref, 
       }
       return true;
     });
-  }, [projects, filter, q]);
+  }, [source, filter, q, lang]);
 
-  const shown = limit ? results.slice(0, limit) : results;
+  const shown = limit && !filtering ? results.slice(0, limit) : results;
   const animKey = `${filter}|${q}`;
 
   useEffect(() => { dispatchEvent(new Event('motion:refresh')); }, [animKey]);
@@ -77,7 +97,8 @@ export default function ProjectGallery({ projects, numbers, limit, viewAllHref, 
     <div className="gallery">
       <div className="gallery__bar" data-reveal>
         <h3 className="gallery__title">
-          {heading ?? s.all} <span>{totalCount ?? counts.all}</span>
+          {filtering ? categoryLabel(lang, filter as ProjectCategory) : heading ?? s.all}{' '}
+          <span>{totalCount ?? (allProjects ? results.length : counts.all)}</span>
         </h3>
         <div className="filters" role="group" aria-label={s.filterLabel}>
           {(['all', ...CATEGORY_ORDER] as Filter[]).map((f) => (
@@ -117,7 +138,7 @@ export default function ProjectGallery({ projects, numbers, limit, viewAllHref, 
         </div>
       )}
 
-      {limit && viewAllHref && (
+      {limit && viewAllHref && !filtering && (
         <div className="gallery__more">
           <Link className="btn btn--outline magnetic" href={viewAllHref}>
             {s.viewAll} <Icon name="i-arrow-right" />

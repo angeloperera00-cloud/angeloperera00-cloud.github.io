@@ -6,7 +6,7 @@
 
 export const site = {
   name: 'Angelo Perera',
-  title: 'Angelo Perera — iOS, Web & Game Developer',
+  title: 'angeloperera - software engineer',
   description:
     'Angelo Perera is an iOS, web and game developer in Naples, Italy, building apps with Swift, SwiftUI, ARKit, RealityKit and Unity. Available for freelance and full-time work.',
   /** Set NEXT_PUBLIC_SITE_URL in your host (e.g. https://yourdomain.com) for absolute social/sitemap URLs. */
@@ -38,7 +38,7 @@ export const site = {
    * render as clearly-marked drafts. Set to false before launch: empty slots and
    * unwritten case-study sections then disappear instead of showing as drafts.
    */
-  showPlaceholders: true,
+  showPlaceholders: false,
 
   /** "View certificate" links. */
   certificates: {
@@ -55,7 +55,6 @@ export type LinkKey = keyof typeof site.links;
 
 export const navItems = [
   { id: 'about', label: 'About' },
-  { id: 'experience', label: 'Experience' },
   { id: 'projects', label: 'Projects' },
   { id: 'skills', label: 'Skills' },
   { id: 'education', label: 'Education' },

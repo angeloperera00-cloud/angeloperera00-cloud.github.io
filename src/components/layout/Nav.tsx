@@ -5,7 +5,6 @@ import { usePathname } from 'next/navigation';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Icon from '@/components/icons/Icon';
 import { navItems, site } from '@/content/site';
-import { pad2 } from '@/lib/format';
 import { lp, LANGS, LANG_LABEL, type Lang } from '@/i18n';
 import { t } from '@/i18n/ui';
 import { saveView } from '@/lib/viewKeeper';
@@ -164,7 +163,6 @@ export default function Nav({ lang, path, hideWriting = false }: { lang: Lang; p
             {items.map((i, n) => (
               <li key={i.id} style={{ ['--i' as string]: n }}>
                 <Link href={href(i.id)} onClick={() => setOpen(false)}>
-                  <small>{pad2(n + 1)}</small>
                   {label(i.id)}
                 </Link>
               </li>

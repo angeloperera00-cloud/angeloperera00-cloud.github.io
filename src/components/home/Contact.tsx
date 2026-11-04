@@ -4,7 +4,6 @@ import SmartLink from '@/components/ui/SmartLink';
 import CopyButton from '@/components/ui/CopyButton';
 import ContactForm from './ContactForm';
 import { site } from '@/content/site';
-import { telHref } from '@/lib/format';
 import type { Lang } from '@/i18n';
 import { t } from '@/i18n/ui';
 
@@ -23,7 +22,6 @@ export default function Contact({ num = '09', lang }: { num?: string; lang: Lang
           <p>{s.lede1}<br />{s.lede2}</p>
           <ul className="contact__list">
             <li><Icon name="i-mail" /><a href={`mailto:${site.email}`} data-copy-src>{site.email}</a><CopyButton value={site.email} label={h.copyEmail} /></li>
-            <li><Icon name="i-phone" /><a href={telHref(site.phone)} data-copy-src>{site.phone}</a><CopyButton value={site.phone} label={h.copyPhone} /></li>
             <li><Icon name="i-map-pin" /><span>{lang === 'it' ? 'Napoli, Italia' : site.location}</span></li>
           </ul>
           <ul className="socials">

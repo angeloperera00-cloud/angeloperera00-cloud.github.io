@@ -5,7 +5,7 @@ import type { Project, ProjectCategory, CaseStudy } from '@/content/types';
 import type { Lang } from '@/i18n';
 import { t } from '@/i18n/ui';
 
-export const CATEGORY_ORDER: ProjectCategory[] = ['ios', 'spatial', 'ai', 'web'];
+export const CATEGORY_ORDER: ProjectCategory[] = ['ios', 'spatial', 'ai', 'web', 'games'];
 export const categoryLabel = (lang: Lang, c: ProjectCategory) => t(lang).categories[c];
 export const categoryShort = (lang: Lang, c: ProjectCategory) => t(lang).categoriesShort[c];
 /** Kept for compatibility (English labels). */

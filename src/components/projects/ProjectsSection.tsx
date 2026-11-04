@@ -23,7 +23,7 @@ export default function ProjectsSection({ lang }: { lang: Lang }) {
       <div className="container">
         <header className="sec-head split-head">
           <div>
-            <SecLabel num="03" label={s.label} />
+            <SecLabel label={s.label} />
             <Display lines={[s.titleA, { text: s.titleB, accent: true }]} />
           </div>
           <span className="split-head__rule" aria-hidden="true" />
@@ -42,6 +42,7 @@ export default function ProjectsSection({ lang }: { lang: Lang }) {
             limit={6}
             viewAllHref={rest.length > 6 ? lp(lang, '/projects/') : undefined}
             heading={s.more}
+            allProjects={all}
             lang={lang}
           />
         )}

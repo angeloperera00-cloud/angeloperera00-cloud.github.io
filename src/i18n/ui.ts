@@ -13,6 +13,18 @@ const en = {
   },
   hero: { viewProjects: 'View projects', downloadCv: 'Download CV', cvIn: 'CV in', badgeTop: 'AVAILABLE FOR', badgeBottom: 'FREELANCE & FULL-TIME', badgeLabel: 'Available for freelance and full-time work', portraitAlt: 'Angelo Perera in a navy suit and white shirt', copyEmail: 'Copy email address', copyPhone: 'Copy phone number', intro: 'Introduction' },
   about: { label: 'About me' },
+  whatido: {
+    label: 'Services', titleA: 'What I', titleB: 'do.',
+    lede: 'These are the areas I work in. Pick one and the projects below filter to match.',
+    project: 'project', projects: 'projects', soon: 'Coming soon', all: 'All projects', groupLabel: 'Filter projects by area',
+    cards: {
+      ios: { title: 'iOS Development', text: 'Native Swift and SwiftUI apps for iPhone, iPad, Apple Watch and Apple TV. Where I feel most at home.' },
+      spatial: { title: 'AR & Spatial Computing', text: 'ARKit, RealityKit and LiDAR experiences that live in the room around you.' },
+      ai: { title: 'AI Integration', text: 'On-device models with Vision and Foundation Models that do real work, not demos.' },
+      web: { title: 'Web Development', text: 'Fast, accessible sites and full-stack apps, from a weekend MVP to production.' },
+      games: { title: 'Game Development', text: 'Games for iPhone and Apple TV, from five-second quizzes to 3D tennis.' },
+    },
+  },
   experience: { label: 'Experience', titleA: 'My', titleB: 'journey.', lede: 'A timeline of my professional experience, projects and roles that shaped my skills.' },
   projects: {
     label: 'Featured projects', titleA: "Things I've", titleB: 'built.', lede: 'A selection of my recent work. Each project is built with passion, solves real problems and delivers meaningful impact.',
@@ -21,8 +33,8 @@ const en = {
     pageLabel: 'Projects', pageTitleA: 'All', pageTitleB: 'projects.', pageLede: 'Apps, games and experiments across iOS, spatial computing, AI and the web. Filter by area or search by technology.',
     reserved: 'reserved slot', placeholder: 'Placeholder', chipsLabel: 'Platforms and technologies',
   },
-  categories: { ios: 'iOS / SwiftUI', spatial: 'AR / Spatial Computing', ai: 'AI / Machine Learning', web: 'Web / Other' },
-  categoriesShort: { ios: 'iOS', spatial: 'AR / Spatial', ai: 'AI / ML', web: 'Web' },
+  categories: { ios: 'iOS / SwiftUI', spatial: 'AR / Spatial Computing', ai: 'AI / Machine Learning', web: 'Web / Other', games: 'Games' },
+  categoriesShort: { ios: 'iOS', spatial: 'AR / Spatial', ai: 'AI / ML', web: 'Web', games: 'Games' },
   cs: {
     allProjects: 'All projects', project: 'Project', platforms: 'Platforms', category: 'Category', year: 'Year', builtWith: 'Built with',
     overview: 'Overview', interface: 'Interface', caseStudy: 'Case study', technology: 'Technology', nextProject: 'Next project',
@@ -71,6 +83,18 @@ const it: UI = {
   },
   hero: { viewProjects: 'Vedi i progetti', downloadCv: 'Scarica CV', cvIn: 'CV in', badgeTop: 'DISPONIBILE PER', badgeBottom: 'FREELANCE E FULL-TIME', badgeLabel: 'Disponibile per lavoro freelance e full-time', portraitAlt: 'Angelo Perera in giacca blu e camicia bianca', copyEmail: "Copia l'indirizzo email", copyPhone: 'Copia il numero di telefono', intro: 'Introduzione' },
   about: { label: 'Chi sono' },
+  whatido: {
+    label: 'Servizi', titleA: 'Cosa', titleB: 'faccio.',
+    lede: 'Queste sono le aree in cui lavoro. Scegline una e i progetti qui sotto si filtrano di conseguenza.',
+    project: 'progetto', projects: 'progetti', soon: 'In arrivo', all: 'Tutti i progetti', groupLabel: 'Filtra i progetti per area',
+    cards: {
+      ios: { title: 'Sviluppo iOS', text: 'App native in Swift e SwiftUI per iPhone, iPad, Apple Watch e Apple TV. Dove mi sento a casa.' },
+      spatial: { title: 'AR e Spatial Computing', text: 'Esperienze con ARKit, RealityKit e LiDAR che vivono nella stanza intorno a te.' },
+      ai: { title: 'Integrazione AI', text: 'Modelli on-device con Vision e Foundation Models che lavorano davvero, non demo.' },
+      web: { title: 'Sviluppo Web', text: 'Siti veloci e accessibili e app full-stack, da un MVP del weekend alla produzione.' },
+      games: { title: 'Sviluppo di giochi', text: 'Giochi per iPhone e Apple TV, dai quiz da cinque secondi al tennis 3D.' },
+    },
+  },
   experience: { label: 'Esperienza', titleA: 'Il mio', titleB: 'percorso.', lede: 'Una timeline delle esperienze professionali, dei progetti e dei ruoli che hanno formato le mie competenze.' },
   projects: {
     label: 'Progetti in evidenza', titleA: 'Cose che ho', titleB: 'creato.', lede: 'Una selezione dei miei lavori recenti. Ogni progetto nasce dalla passione, risolve problemi reali e ha un impatto concreto.',
@@ -79,8 +103,8 @@ const it: UI = {
     pageLabel: 'Progetti', pageTitleA: 'Tutti i', pageTitleB: 'progetti.', pageLede: "App, giochi ed esperimenti tra iOS, spatial computing, AI e web. Filtra per area o cerca per tecnologia.",
     reserved: 'spazio riservato', placeholder: 'Segnaposto', chipsLabel: 'Piattaforme e tecnologie',
   },
-  categories: { ios: 'iOS / SwiftUI', spatial: 'AR / Spatial Computing', ai: 'AI / Machine Learning', web: 'Web / Altro' },
-  categoriesShort: { ios: 'iOS', spatial: 'AR / Spatial', ai: 'AI / ML', web: 'Web' },
+  categories: { ios: 'iOS / SwiftUI', spatial: 'AR / Spatial Computing', ai: 'AI / Machine Learning', web: 'Web / Altro', games: 'Giochi' },
+  categoriesShort: { ios: 'iOS', spatial: 'AR / Spatial', ai: 'AI / ML', web: 'Web', games: 'Giochi' },
   cs: {
     allProjects: 'Tutti i progetti', project: 'Progetto', platforms: 'Piattaforme', category: 'Categoria', year: 'Anno', builtWith: 'Realizzato con',
     overview: 'Panoramica', interface: 'Interfaccia', caseStudy: 'Case study', technology: 'Tecnologie', nextProject: 'Prossimo progetto',

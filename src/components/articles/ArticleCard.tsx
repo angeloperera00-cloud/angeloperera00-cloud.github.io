@@ -16,7 +16,6 @@ export default function ArticleCard({ article, index, style, lang }: { article: 
         {article.placeholder && <span className="draft-pill">{t(lang).projects.placeholder}</span>}
       </div>
       <div className="acard__body" style={style}>
-        {index !== undefined && <span className="acard__no" aria-hidden="true">{String(index).padStart(2, '0')}</span>}
         <ArticleMeta article={article} lang={lang} />
         <h3 className="acard__title"><span>{article.title}</span></h3>
         {article.excerpt && <p className="acard__excerpt">{article.excerpt}</p>}

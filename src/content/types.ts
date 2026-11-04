@@ -13,7 +13,7 @@ export type Glyph =
 
 /* ------------------------------------------------------------------ Projects */
 
-export type ProjectCategory = 'ios' | 'spatial' | 'ai' | 'web';
+export type ProjectCategory = 'ios' | 'spatial' | 'ai' | 'web' | 'games';
 
 /** 'poster' = an App Store marketing image that already includes its own device frame. */
 export type DeviceKind = 'iphone' | 'ipad' | 'watch' | 'tv' | 'vision' | 'laptop' | 'browser' | 'poster';

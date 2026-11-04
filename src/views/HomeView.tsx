@@ -1,6 +1,6 @@
 import Hero from '@/components/home/Hero';
 import About from '@/components/home/About';
-import Experience from '@/components/home/Experience';
+import WhatIDo from '@/components/home/WhatIDo';
 import Skills from '@/components/home/Skills';
 import Education from '@/components/home/Education';
 import Certifications from '@/components/home/Certifications';
@@ -19,7 +19,7 @@ export default function HomeView({ lang }: { lang: Lang }) {
     <>
       <Hero lang={lang} />
       <About lang={lang} />
-      <Experience lang={lang} />
+      <WhatIDo lang={lang} />
       <ProjectsSection lang={lang} />
       <Skills lang={lang} />
       <Education lang={lang} />

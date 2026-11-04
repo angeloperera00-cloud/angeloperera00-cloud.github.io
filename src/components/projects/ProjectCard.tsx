@@ -16,7 +16,6 @@ export default function ProjectCard({ project, number, style, lang }: { project:
     return (
       <article className="pcard pcard--slot" style={style} aria-label={`${project.title}: ${s.reserved}`}>
         <div className="pcard__media pcard__media--slot">
-          <span className="pcard__num">{number}</span>
           <span className="draft-pill">{s.placeholder}</span>
           <Icon name="i-image" className="pcard__slot-ic" />
         </div>
@@ -39,7 +38,6 @@ export default function ProjectCard({ project, number, style, lang }: { project:
         ) : (
           <div className="pcard__nocover"><AppIcon spec={project.icon} size="lg" /></div>
         )}
-        <span className="pcard__num">{number}</span>
         {project.featured && <span className="pcard__tag">{s.featured}</span>}
       </div>
       <div className="pcard__body">

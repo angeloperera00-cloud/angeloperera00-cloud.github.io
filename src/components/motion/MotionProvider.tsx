@@ -149,6 +149,7 @@ export default function MotionProvider() {
         const r = timeline.getBoundingClientRect();
         const p = reduced ? 1 : clamp((vh * 0.62 - r.top) / (r.height * 0.82), 0, 1);
         railFill.style.setProperty('--p', p.toFixed(4));
+        railFill.parentElement?.style.setProperty('--p', p.toFixed(4));
       }
       if (reduced) return;
       parallaxImgs.forEach((img) => {

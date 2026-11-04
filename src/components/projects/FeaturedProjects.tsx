@@ -55,7 +55,6 @@ export default function FeaturedProjects({ projects, numbers, lang }: { projects
             />
           )}
         </div>
-        <span className="pcard__num">{numbers[lead.slug]}</span>
         <span className="pcard__tag">{s.featured}</span>
         <div className="fbanner__body">
           <div className="fbanner__title">
@@ -86,7 +85,6 @@ export default function FeaturedProjects({ projects, numbers, lang }: { projects
                 ) : (
                   <div className="pcard__nocover"><AppIcon spec={p.icon} size="lg" /></div>
                 )}
-                <span className="pcard__num">{numbers[p.slug]}</span>
                 <span className="pcard__tag">{s.featured}</span>
               </div>
               <div className="fcard__body">
