@@ -24,10 +24,10 @@ export const metadata: Metadata = {
   twitter: { card: 'summary_large_image', images: ['/images/og-2.jpg'] },
   icons: {
     icon: [
-      { url: '/icons/favicon-ap.svg', type: 'image/svg+xml' },
-      { url: '/icons/favicon-ap-32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/icons/ap-icon-v3.svg', type: 'image/svg+xml' },
+      { url: '/icons/ap-icon-v3-32.png', type: 'image/png', sizes: '32x32' },
     ],
-    apple: '/icons/apple-touch-icon.png',
+    apple: '/icons/ap-touch-v3.png',
   },
 };
 
