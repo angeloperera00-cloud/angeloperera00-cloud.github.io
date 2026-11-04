@@ -37,7 +37,7 @@ export const projects: Project[] = [
     ],
     icon: { src: '/images/projects/mtlab/icon.png', alt: 'MTLab app icon' },
     accent: '#3A4DB0',
-    cover: { src: '/images/projects/mtlab/cover.webp', alt: 'Two MTLab iPad screens: the 3D lathe placed in AR on a tiled floor, and the Manual Machines list' },
+    cover: { src: '/images/projects/mtlab/cover.webp', alt: 'A 3D lathe machine placed in augmented reality on a tiled floor' },
     year: '2026',
     screenshots: [
       {
@@ -63,14 +63,6 @@ export const projects: Project[] = [
     caseStudy: {
       overview:
         'MTLab is a virtual mechanical engineering laboratory. It uses interactive 3D simulations to teach how industrial machines work, starting with the lathe, for mechanical engineering students, engineering colleges, industrial training institutes and technical educators.',
-      problem: {
-        paragraphs: [
-          "Students learning how industrial machines work often get little hands-on time with real equipment: machines are expensive, shared and not always safe for beginners. From theory alone, it is hard to picture how parts like the chuck and the carriage actually move.",
-        ],
-      },
-      role: {
-        paragraphs: ["Developer on the team. I wrote the app's code: the interactive 3D lathe, the machine theory screens and the AR mode that places the machine in the room."],
-      },
       solutions: {
         bullets: [
           'Interactive 3D lathe simulation.',
@@ -122,14 +114,6 @@ export const projects: Project[] = [
     caseStudy: {
       overview:
         'TennisLand is a 3D tennis game for Apple TV, played on the big screen with the Siri Remote. Beyond matches, it brings challenges, tournaments and players together in one place.',
-      problem: {
-        paragraphs: [
-          "Tennis games usually need a game controller or a phone screen. TennisLand set out to bring a full 3D tennis match to the living-room TV, playable with just the Siri Remote that comes with every Apple TV.",
-        ],
-      },
-      role: {
-        paragraphs: ["Developer on the team. I coded the game: the 3D court and stadium, the Siri Remote controls, and the menus for challenges, tournaments and players."],
-      },
       solutions: {
         bullets: [
           'Full 3D stadium and court built for the TV screen.',
@@ -186,9 +170,6 @@ export const projects: Project[] = [
           'Developed together with members of CIVES, whose feedback shaped how distance is communicated and how the two modes work. Created for the Swift Student Challenge 2025/26.',
         ],
       },
-      role: {
-        paragraphs: ["Developer on the team. I wrote the code for both modes: LiDAR distance sensing with haptic and sound feedback, and the camera label reader."],
-      },
       solutions: {
         bullets: [
           'Scan Space: LiDAR depth sensing measures the distance to the nearest obstacle in real time.',
@@ -233,14 +214,6 @@ export const projects: Project[] = [
     caseStudy: {
       overview:
         'EyeCheck helps people understand their vision in a fun, interactive way. It places a real-size eye chart and virtual glasses in the room with augmented reality, runs a visual test and a colour perception test, and explains conditions such as myopia with interactive diagrams. It is built for everyone and is clearly framed as an educational tool, not a substitute for a professional eye exam.',
-      problem: {
-        paragraphs: [
-          "Many people only think about their eyesight at an eye exam, and terms like myopia are hard to picture. There was room for a friendly, interactive way to try a vision test at home and understand what it means, while making clear it does not replace a professional exam.",
-        ],
-      },
-      role: {
-        paragraphs: ["Developer on the team. I coded the AR eye chart and glasses placement, the visual and colour perception tests, and the vision analysis screens."],
-      },
       solutions: {
         bullets: [
           'Visual test with a Snellen eye chart placed in AR, and a slider to simulate blur.',
@@ -275,7 +248,7 @@ export const projects: Project[] = [
     ],
     icon: { src: '/images/projects/stikar/icon.png', alt: 'StikAR app icon' },
     accent: '#6CC24A',
-    cover: { src: '/images/projects/stikar/cover.webp', alt: 'Three StikAR App Store screenshots: choosing stickers, connecting with people nearby and finding memories left by others' },
+    cover: { src: '/images/projects/stikar/cover.webp', alt: 'StikAR pixel-art logo with the line Drop stickers into the real world' },
     year: '2026',
     screenshots: [
       { device: 'poster', width: 852, height: 1124, src: '/images/projects/stikar/screen-1.webp', alt: 'StikAR title screen: Drop stickers into the real world', caption: 'Drop stickers into the real world' },
@@ -286,13 +259,8 @@ export const projects: Project[] = [
     caseStudy: {
       overview:
         'StikAR lets people place virtual stickers in real locations and find them again later. It is built around simple, playful spatial interaction and a shared experience: sign in with just a username, drop stickers into the world, and return to a zone to see them reappear.',
-      problem: {
-        paragraphs: [
-          "Sharing a moment usually means a post that disappears in a feed. StikAR asks a different question: what if you could leave something in the place itself, for friends or strangers to discover when they get there?",
-        ],
-      },
       role: {
-        paragraphs: ["Developer on a five-person team, credited on the App Store listing. I wrote code for the AR sticker experience: placing stickers in real places, reloading them in a zone, and moving and resizing them."],
+        paragraphs: ['Built as a five-person team project. I am one of the credited contributors on the App Store listing.'],
       },
       solutions: {
         bullets: [
@@ -339,14 +307,6 @@ export const projects: Project[] = [
       { device: 'iphone', width: 286, height: 598, src: '/images/projects/wanderly/screen-6.webp', alt: 'Wanderly Profile with travel stats, badges and a digital passport', caption: 'Badges and a digital passport' },
     ],
     caseStudy: {
-      problem: {
-        paragraphs: [
-          "Planning a trip often means jumping between search, maps, notes and social media. Wanderly brings discovering places, saving ideas and keeping track of where you have been into one app.",
-        ],
-      },
-      role: {
-        paragraphs: ["Developer on the team. I coded the app's screens and features: Discover, Explore by country, Saved places and the Profile with badges and a digital passport."],
-      },
       solutions: {
         bullets: [
           'Discover tab with destination search, category filters (beaches, mountains, cultural), trending and top-rated places.',
@@ -382,7 +342,7 @@ export const projects: Project[] = [
     ],
     icon: { src: '/images/projects/vfit/icon.png', alt: 'V Fit app icon' },
     accent: '#C6F432',
-    cover: { src: '/images/projects/vfit/cover-3.webp', alt: 'Five V Fit App Store screenshots: daily plan, workout, body twin, recovery and posture' },
+    cover: { src: '/images/projects/vfit/cover.webp', alt: 'Five V Fit App Store screenshots: daily plan, workout, body twin, recovery and posture' },
     year: '2026',
     screenshots: [
       { device: 'poster', width: 386, height: 868, src: '/images/projects/vfit/screen-1.webp', alt: 'V Fit home with today\'s plan and recovery, sleep, soreness and hydration overview', caption: 'Your training, adapted daily' },
@@ -397,11 +357,6 @@ export const projects: Project[] = [
         'V Fit is an AI gym and recovery tracker for people working toward a leaner physique, more muscle or better movement. It scans the body with the iPhone camera and Apple\'s Vision framework, tracks how recovered each muscle group is, and builds workouts around that readiness. Scans are processed on-device, it needs no account, and no subscription.',
       role: {
         paragraphs: ['Solo project: I designed, built and published the app on the App Store under my own developer account.'],
-      },
-      problem: {
-        paragraphs: [
-          "Most workout apps give you the same plan whether you slept badly or your legs are still sore. People who train seriously need to know which muscles are recovered and how their posture and symmetry change, without sending body photos to a server.",
-        ],
       },
       solutions: {
         bullets: [
@@ -451,11 +406,6 @@ export const projects: Project[] = [
       role: {
         paragraphs: ['Solo project: designed, built and published on the App Store under my own developer account.'],
       },
-      problem: {
-        paragraphs: [
-          "Geography quizzes often feel slow or like homework. Country Dash makes learning countries quick and addictive: 5 seconds per question and short rounds you can play in a spare minute.",
-        ],
-      },
       solutions: {
         bullets: [
           'A 5-second timer on every question.',
@@ -485,7 +435,7 @@ export const projects: Project[] = [
     tech: [],
     icon: { src: '/images/projects/poop-run/icon.png', alt: 'Poop Run game icon' },
     accent: '#2C63E0',
-    cover: { src: '/images/projects/poop-run/cover.webp', alt: 'The Poop Run logo between two gameplay screens of the runner on a tree-lined road' },
+    cover: { src: '/images/projects/poop-run/cover.webp', alt: 'Poop Run gameplay: a runner on a road lined with trees and lamp posts' },
     screenshots: [
       { device: 'poster', width: 1254, height: 1254, src: '/images/projects/poop-run/screen-1.webp', alt: 'The runner jumping over obstacles, score 95 and speed 14', caption: 'Jump the obstacles' },
       { device: 'poster', width: 1254, height: 1254, src: '/images/projects/poop-run/screen-2.webp', alt: 'The runner on the road with obstacles ahead, score 61 and speed 13', caption: 'Score and speed keep climbing' },
@@ -493,14 +443,6 @@ export const projects: Project[] = [
     caseStudy: {
       overview:
         'Poop Run is an endless 3D runner. The player races down a tree-lined road, jumping and switching lanes to dodge obstacles while the score and speed keep going up.',
-      problem: {
-        paragraphs: [
-          "Endless runners are perfect for quick sessions, but many of them feel the same. Poop Run gives the genre a funny theme and simple controls: run, jump and dodge while the speed keeps climbing.",
-        ],
-      },
-      role: {
-        paragraphs: ["Developer on the team. I coded the game: the endless road, lane switching and jumping, the obstacles, and the score and speed system."],
-      },
       solutions: {
         bullets: [
           'Endless 3D road with trees and street lamps.',
@@ -531,23 +473,15 @@ export const projects: Project[] = [
     ],
     icon: { src: '/images/projects/coachplan/icon.png', alt: 'CoachPlan app icon: a white dumbbell over a green leaf' },
     accent: '#2FA866',
-    cover: { src: '/images/projects/coachplan/cover.webp', alt: 'Three CoachPlan iPhone screens on a green background: home, workout plan and nutrition plan' },
+    cover: { src: '/images/projects/coachplan/cover.webp', alt: 'Three CoachPlan screens: home, workout plan and nutrition plan' },
     screenshots: [
-      { device: 'poster', width: 651, height: 1201, src: '/images/projects/coachplan/screen-1.webp', alt: 'CoachPlan home with the selected client and two actions: create a workout plan or a nutrition plan', caption: 'Pick a client, then create' },
-      { device: 'poster', width: 645, height: 1207, src: '/images/projects/coachplan/screen-2.webp', alt: 'Workout plan for Monday with exercises, sets, reps, rest and photos', caption: 'Exercises, sets, reps and rest' },
-      { device: 'poster', width: 697, height: 1207, src: '/images/projects/coachplan/screen-3.webp', alt: 'Weekly nutrition plan grid with meals from breakfast to before bed for each day', caption: 'A full week of meals' },
+      { device: 'poster', width: 444, height: 814, src: '/images/projects/coachplan/screen-1.webp', alt: 'CoachPlan home with the selected client and two actions: create a workout plan or a nutrition plan', caption: 'Pick a client, then create' },
+      { device: 'poster', width: 440, height: 814, src: '/images/projects/coachplan/screen-2.webp', alt: 'Workout plan for Monday with exercises, sets, reps, rest and photos', caption: 'Exercises, sets, reps and rest' },
+      { device: 'poster', width: 480, height: 814, src: '/images/projects/coachplan/screen-3.webp', alt: 'Weekly nutrition plan grid with meals from breakfast to before bed for each day', caption: 'A full week of meals' },
     ],
     caseStudy: {
       overview:
         'CoachPlan is built for personal trainers. From one home screen the trainer picks a client and creates either a workout plan or a weekly nutrition plan, then exports it to share with the client.',
-      problem: {
-        paragraphs: [
-          "Personal trainers often build workout and nutrition plans in spreadsheets, notes or chat messages, which is slow and easy to mix up between clients. CoachPlan keeps both plans for every client in one place and exports them in one tap.",
-        ],
-      },
-      role: {
-        paragraphs: ["Developer on the team. I coded the app: client selection, the workout plan builder, the weekly nutrition grid and export."],
-      },
       solutions: {
         bullets: [
           'Client selector on every screen, so each plan belongs to one client.',

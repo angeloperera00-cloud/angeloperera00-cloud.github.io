@@ -19,8 +19,6 @@ export const projectsIt: Record<string, ProjectTranslation> = {
     caseStudy: {
       overview:
         "MTLab è un laboratorio virtuale di ingegneria meccanica. Usa simulazioni 3D interattive per insegnare il funzionamento delle macchine industriali, partendo dal tornio, a studenti di ingegneria meccanica, università, istituti tecnici e docenti.",
-      problem: { paragraphs: ["Chi studia il funzionamento delle macchine industriali ha spesso poco tempo pratico su attrezzature reali: le macchine sono costose, condivise e non sempre sicure per i principianti. Con la sola teoria è difficile immaginare come si muovono davvero parti come il mandrino e il carrello."] },
-      role: { paragraphs: ["Sviluppatore del team. Ho scritto il codice dell'app: il tornio 3D interattivo, le schermate di teoria della macchina e la modalità AR che posiziona la macchina nella stanza."] },
       solutions: {
         bullets: [
           'Simulazione 3D interattiva del tornio.',
@@ -43,8 +41,6 @@ export const projectsIt: Record<string, ProjectTranslation> = {
     caseStudy: {
       overview:
         "TennisLand è un gioco di tennis 3D per Apple TV, da giocare sul grande schermo con il Siri Remote. Oltre alle partite, riunisce in un unico posto sfide, tornei e giocatori.",
-      problem: { paragraphs: ["I giochi di tennis di solito richiedono un controller o lo schermo di un telefono. TennisLand porta una partita di tennis in 3D sulla TV di casa, giocabile solo con il Siri Remote incluso con ogni Apple TV."] },
-      role: { paragraphs: ["Sviluppatore del team. Ho programmato il gioco: il campo e lo stadio in 3D, i controlli con il Siri Remote e i menu di sfide, tornei e giocatori."] },
       solutions: {
         bullets: [
           'Stadio e campo in 3D pensati per lo schermo della TV.',
@@ -72,7 +68,6 @@ export const projectsIt: Record<string, ProjectTranslation> = {
           'Sviluppato con i membri di CIVES, il cui feedback ha definito come comunicare la distanza e come funzionano le due modalità. Creato per lo Swift Student Challenge 2025/26.',
         ],
       },
-      role: { paragraphs: ["Sviluppatore del team. Ho scritto il codice di entrambe le modalità: il rilevamento della distanza con il LiDAR con feedback aptico e sonoro, e la lettura delle etichette con la fotocamera."] },
       solutions: {
         bullets: [
           "Scan Space: il sensore LiDAR misura in tempo reale la distanza dall'ostacolo più vicino.",
@@ -89,8 +84,6 @@ export const projectsIt: Record<string, ProjectTranslation> = {
     caseStudy: {
       overview:
         "EyeCheck aiuta a capire la propria vista in modo divertente e interattivo. Posiziona nella stanza, in realtà aumentata, una tabella ottotipica a grandezza reale e degli occhiali virtuali, offre un test visivo e un test di percezione dei colori e spiega condizioni come la miopia con schemi interattivi. È pensata per tutti ed è presentata chiaramente come strumento educativo, non come sostituto di una visita oculistica.",
-      problem: { paragraphs: ["Molte persone pensano alla propria vista solo durante una visita oculistica, e termini come miopia sono difficili da immaginare. Mancava un modo semplice e interattivo per provare un test visivo a casa e capirne il significato, chiarendo che non sostituisce una visita professionale."] },
-      role: { paragraphs: ["Sviluppatore del team. Ho programmato il posizionamento in AR della tabella ottotipica e degli occhiali, i test visivo e di percezione dei colori e le schermate di analisi della vista."] },
       solutions: {
         bullets: [
           'Test visivo con tabella ottotipica di Snellen posizionata in AR e uno slider per simulare la sfocatura.',
@@ -109,8 +102,9 @@ export const projectsIt: Record<string, ProjectTranslation> = {
     caseStudy: {
       overview:
         "StikAR permette di posizionare sticker virtuali in luoghi reali e di ritrovarli in seguito. È pensata per un'interazione spaziale semplice e giocosa e per un'esperienza condivisa: accedi solo con un nome utente, lascia sticker nel mondo e torna in una zona per vederli ricomparire.",
-      problem: { paragraphs: ["Condividere un momento di solito significa un post che sparisce nel feed. StikAR propone un'altra idea: e se potessi lasciare qualcosa nel luogo stesso, perché amici o sconosciuti lo scoprano quando ci arrivano?"] },
-      role: { paragraphs: ["Sviluppatore in un team di cinque persone, tra i contributori indicati sull'App Store. Ho scritto codice per l'esperienza degli sticker in AR: posizionarli in luoghi reali, ricaricarli in una zona, spostarli e ridimensionarli."] },
+      role: {
+        paragraphs: ["Progetto di team di cinque persone. Sono uno dei collaboratori indicati nella scheda dell'App Store."],
+      },
       solutions: {
         bullets: [
           'Posiziona sticker nel mondo reale in AR, scegliendo tra oltre 15 sticker in pixel art.',
@@ -131,8 +125,6 @@ export const projectsIt: Record<string, ProjectTranslation> = {
     summary: 'Il tuo compagno di viaggio intelligente per scoprire luoghi, pianificare viaggi ed esplorare il mondo.',
     captions: ['Scopri le mete di tendenza', 'Esplora 88 paesi per continente', 'Di tendenza e più votati', 'Pagine dei paesi con i luoghi da non perdere', 'Salva i luoghi per dopo', 'Badge e passaporto digitale'],
     caseStudy: {
-      problem: { paragraphs: ["Organizzare un viaggio spesso significa passare continuamente tra ricerca, mappe, note e social. Wanderly riunisce in un'unica app la scoperta dei luoghi, le idee salvate e i posti già visitati."] },
-      role: { paragraphs: ["Sviluppatore del team. Ho programmato le schermate e le funzioni dell'app: Scopri, Esplora per paese, Luoghi salvati e il Profilo con badge e passaporto digitale."] },
       solutions: {
         bullets: [
           'Scheda Scopri con ricerca delle mete, filtri per categoria (spiagge, montagne, cultura), luoghi di tendenza e più votati.',
@@ -153,7 +145,6 @@ export const projectsIt: Record<string, ProjectTranslation> = {
       role: {
         paragraphs: ["Progetto individuale: ho progettato, sviluppato e pubblicato l'app sull'App Store con il mio account sviluppatore."],
       },
-      problem: { paragraphs: ["La maggior parte delle app di allenamento propone lo stesso piano anche se hai dormito male o hai ancora le gambe indolenzite. Chi si allena seriamente ha bisogno di sapere quali muscoli sono recuperati e come cambiano postura e simmetria, senza inviare foto del corpo a un server."] },
       solutions: {
         bullets: [
           'Scansione del corpo con Vision: punteggio della postura, allineamento delle spalle, inclinazione del bacino, posizione di ginocchia e caviglie e simmetria muscolare.',
@@ -176,7 +167,6 @@ export const projectsIt: Record<string, ProjectTranslation> = {
       overview:
         "Country Dash è un quiz di geografia veloce per iPhone. Ogni domanda ti dà 5 secondi per indicare un paese, dai più noti ai meno conosciuti. Le partite brevi sono perfette per un minuto libero e non serve creare un account.",
       role: { paragraphs: ["Progetto individuale: progettato, sviluppato e pubblicato sull'App Store con il mio account sviluppatore."] },
-      problem: { paragraphs: ["I quiz di geografia spesso sembrano lenti o noiosi come i compiti. Country Dash rende l'apprendimento dei paesi veloce e coinvolgente: 5 secondi per domanda e partite brevi da giocare in un minuto libero."] },
       solutions: {
         bullets: [
           'Un timer di 5 secondi per ogni domanda.',
@@ -195,8 +185,6 @@ export const projectsIt: Record<string, ProjectTranslation> = {
     captions: ['Salta gli ostacoli', 'Punteggio e velocità continuano a salire'],
     caseStudy: {
       overview: "Poop Run è un endless runner in 3D. Il giocatore corre lungo una strada alberata, saltando e cambiando corsia per evitare gli ostacoli mentre punteggio e velocità aumentano.",
-      problem: { paragraphs: ["Gli endless runner sono perfetti per partite veloci, ma molti si somigliano. Poop Run dà al genere un tema divertente e controlli semplici: corri, salta e schiva mentre la velocità continua a salire."] },
-      role: { paragraphs: ["Sviluppatore del team. Ho programmato il gioco: la strada infinita, il cambio di corsia e il salto, gli ostacoli e il sistema di punteggio e velocità."] },
       solutions: { bullets: ['Strada infinita in 3D con alberi e lampioni.', 'Salta e schiva gli ostacoli tra le corsie.', 'Contatori di punteggio e velocità in tempo reale.'] },
     },
   },
@@ -205,8 +193,6 @@ export const projectsIt: Record<string, ProjectTranslation> = {
     captions: ['Scegli un cliente e crea', 'Esercizi, serie, ripetizioni e recupero', 'Una settimana intera di pasti'],
     caseStudy: {
       overview: "CoachPlan è pensata per i personal trainer. Dalla home il trainer sceglie un cliente e crea una scheda di allenamento o un piano alimentare settimanale, poi lo esporta per condividerlo con il cliente.",
-      problem: { paragraphs: ["I personal trainer spesso preparano schede di allenamento e piani alimentari su fogli di calcolo, note o chat: è lento ed è facile confondere i clienti. CoachPlan tiene entrambi i piani di ogni cliente in un unico posto e li esporta con un tocco."] },
-      role: { paragraphs: ["Sviluppatore del team. Ho programmato l'app: la selezione del cliente, la creazione delle schede di allenamento, la griglia alimentare settimanale e l'esportazione."] },
       solutions: { bullets: ['Selettore del cliente in ogni schermata: ogni piano appartiene a un cliente.', 'Schede di allenamento per giorno: esercizi inseriti a mano con serie, ripetizioni, recupero e foto.', 'Piani alimentari a griglia settimanale: colazione, spuntini, pranzo, cena e pre-nanna, da lunedì a domenica.', 'Note opzionali su ogni piano ed Esporta con un tocco.'] },
     },
   },
