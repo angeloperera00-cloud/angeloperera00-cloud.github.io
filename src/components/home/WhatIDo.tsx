@@ -7,6 +7,8 @@ import { t } from '@/i18n/ui';
 
 /* The five areas Angelo works in. Each card filters the Projects section below. */
 const ORDER: ProjectCategory[] = ['ios', 'spatial', 'ai', 'web', 'games'];
+/** Years of experience shown on a card (leave an area out to show only its project count). */
+const YEARS: Partial<Record<ProjectCategory, string>> = {};
 
 export default function WhatIDo({ lang }: { lang: Lang }) {
   const s = t(lang).whatido;
@@ -16,6 +18,7 @@ export default function WhatIDo({ lang }: { lang: Lang }) {
     title: s.cards[c].title,
     text: s.cards[c].text,
     count: projects.filter((p) => p.categories.includes(c)).length,
+    years: YEARS[c],
   }));
 
   return (

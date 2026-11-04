@@ -15,8 +15,8 @@ const en = {
   about: { label: 'About me' },
   whatido: {
     label: 'Services', titleA: 'What I', titleB: 'do.',
-    lede: 'These are the areas I work in. Pick one and the projects below filter to match.',
-    project: 'project', projects: 'projects', soon: 'Coming soon', all: 'All projects', groupLabel: 'Filter projects by area',
+    lede: '5+ years building apps, games and websites. Pick an area and the projects below filter to match.',
+    years: 'years', project: 'project', projects: 'projects', soon: 'Coming soon', all: 'All projects', groupLabel: 'Filter projects by area',
     cards: {
       ios: { title: 'iOS Development', text: 'Native Swift and SwiftUI apps for iPhone, iPad, Apple Watch and Apple TV. Where I feel most at home.' },
       spatial: { title: 'AR & Spatial Computing', text: 'ARKit, RealityKit and LiDAR experiences that live in the room around you.' },
@@ -85,8 +85,8 @@ const it: UI = {
   about: { label: 'Chi sono' },
   whatido: {
     label: 'Servizi', titleA: 'Cosa', titleB: 'faccio.',
-    lede: 'Queste sono le aree in cui lavoro. Scegline una e i progetti qui sotto si filtrano di conseguenza.',
-    project: 'progetto', projects: 'progetti', soon: 'In arrivo', all: 'Tutti i progetti', groupLabel: 'Filtra i progetti per area',
+    lede: 'Oltre 5 anni di esperienza tra app, giochi e siti web. Scegli un\'area e i progetti qui sotto si filtrano di conseguenza.',
+    years: 'anni', project: 'progetto', projects: 'progetti', soon: 'In arrivo', all: 'Tutti i progetti', groupLabel: 'Filtra i progetti per area',
     cards: {
       ios: { title: 'Sviluppo iOS', text: 'App native in Swift e SwiftUI per iPhone, iPad, Apple Watch e Apple TV. Dove mi sento a casa.' },
       spatial: { title: 'AR e Spatial Computing', text: 'Esperienze con ARKit, RealityKit e LiDAR che vivono nella stanza intorno a te.' },

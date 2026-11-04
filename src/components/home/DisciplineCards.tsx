@@ -6,7 +6,7 @@ import type { ProjectCategory } from '@/content/types';
 import type { Lang } from '@/i18n';
 import { t } from '@/i18n/ui';
 
-export interface Discipline { id: ProjectCategory; title: string; text: string; count: number }
+export interface Discipline { id: ProjectCategory; title: string; text: string; count: number; years?: string }
 type Filter = 'all' | ProjectCategory;
 
 /** Picks a filter for the Projects gallery (it listens for "projects:filter") and scrolls there. */
@@ -42,7 +42,7 @@ export default function DisciplineCards({ items, lang }: { items: Discipline[]; 
             <button
               key={d.id}
               type="button"
-              className="dcard"
+              className={`dcard${d.years ? ' dcard--years' : ''}`}
               data-reveal="card"
               style={{ ['--d' as string]: `${i * 0.07}s` } as CSSProperties}
               aria-pressed={active === d.id}
@@ -52,7 +52,12 @@ export default function DisciplineCards({ items, lang }: { items: Discipline[]; 
               <span className="dcard__arrow" aria-hidden="true"><Icon name="i-arrow-up-right" /></span>
               <span className="dcard__title">{d.title}</span>
               <span className="dcard__text">{d.text}</span>
-              <span className="dcard__count">{empty ? s.soon : `${d.count} ${d.count === 1 ? s.project : s.projects}`}</span>
+              <span className="dcard__count">
+                {[
+                  d.years && `${d.years} ${s.years}`,
+                  !empty ? `${d.count} ${d.count === 1 ? s.project : s.projects}` : !d.years && s.soon,
+                ].filter(Boolean).join(' · ')}
+              </span>
             </button>
           );
         })}

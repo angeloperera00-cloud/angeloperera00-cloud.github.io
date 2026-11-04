@@ -1114,15 +1114,6 @@ html.intro-run .hero__contact li:nth-child(3) { transition-delay: 1.06s; }
    Projects section below (see DisciplineCards.tsx and ProjectGallery.tsx).
    ========================================================================== */
 .whatido { position: relative; background: var(--paper); overflow: hidden; isolation: isolate; }
-.whatido::before {
-  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
-  background-image:
-    linear-gradient(rgba(13, 13, 13, .055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(13, 13, 13, .055) 1px, transparent 1px);
-  background-size: 128px 128px; background-position: -1px -1px;
-  -webkit-mask-image: radial-gradient(120% 90% at 50% 40%, #000 35%, transparent 85%);
-          mask-image: radial-gradient(120% 90% at 50% 40%, #000 35%, transparent 85%);
-}
 .whatido__head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 20px clamp(28px, 6vw, 96px); align-items: end; }
 .whatido__head .display { font-size: clamp(52px, 6.4vw, 92px); }
 .whatido__head .sec-lede { justify-self: end; max-width: 36ch; padding-bottom: 12px; }
@@ -1160,6 +1151,7 @@ html.intro-run .hero__contact li:nth-child(3) { transition-delay: 1.06s; }
 .dcard:disabled:hover .dcard__text { color: var(--ink-3); }
 .dcard:disabled:hover .dcard__count { color: var(--ink-4); border-color: var(--line-l); }
 .dcard:disabled .dcard__count::before { background: var(--ink-4); }
+.dcard--years:disabled .dcard__count::before { background: var(--red); }
 
 .dcards__foot { display: flex; justify-content: flex-end; margin-top: 26px; }
 .dcards__all {
