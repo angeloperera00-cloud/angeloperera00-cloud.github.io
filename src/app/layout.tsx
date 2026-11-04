@@ -13,8 +13,15 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: site.title, template: `%s — ${site.name}` },
   description: site.description,
-  openGraph: { type: 'website', title: site.title, description: site.description, images: ['/images/og.jpg'] },
-  twitter: { card: 'summary_large_image' },
+  openGraph: {
+    type: 'website',
+    url: '/',
+    siteName: site.name,
+    title: site.title,
+    description: site.description,
+    images: [{ url: '/images/og-2.jpg', width: 1200, height: 630, alt: 'Angelo Perera, software engineer' }],
+  },
+  twitter: { card: 'summary_large_image', images: ['/images/og-2.jpg'] },
   icons: {
     icon: [
       { url: '/icons/favicon-ap.svg', type: 'image/svg+xml' },

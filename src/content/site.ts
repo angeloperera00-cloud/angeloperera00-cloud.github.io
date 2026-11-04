@@ -8,9 +8,9 @@ export const site = {
   name: 'Angelo Perera',
   title: 'angeloperera - software engineer',
   description:
-    'Angelo Perera is an iOS, web and game developer in Naples, Italy, building apps with Swift, SwiftUI, ARKit, RealityKit and Unity. Available for freelance and full-time work.',
+    'Software engineer in Naples, Italy. iOS, AR and spatial computing, AI and games: 10 projects with the stories behind them.',
   /** Set NEXT_PUBLIC_SITE_URL in your host (e.g. https://yourdomain.com) for absolute social/sitemap URLs. */
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000',
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://angeloperera.pages.dev',
 
   email: 'angeloperera00@gmail.com',
   // ⚠ The design showed "+39 351 035 8724" (hero) and "+39 351 036 8724" (contact). Keep the correct one.
