@@ -204,7 +204,7 @@ export type CertLogo = 'academy' | 'udemy' | 'harvard' | 'javascript' | 'swift' 
 
 export const certifications: { id: string; logo: CertLogo; years: string; title: string; issuer: string; text: string }[] = [
   { id: 'apple-academy', logo: 'academy', years: '2024 – 2026', title: 'Apple Developer Academy', issuer: 'University of Naples Federico II', text: 'Intensive program focused on iOS development, teamwork, design and building real world apps with Apple technologies.' },
-  { id: 'udemy-se', logo: 'udemy', years: '2020', title: 'Software Engineering Diploma', issuer: 'Udemy', text: 'Comprehensive diploma covering software engineering principles, data structures, algorithms and system design.' },
+  { id: 'udemy-se', logo: 'udemy', years: '2020 – 2023', title: 'Software Engineering', issuer: 'Udemy', text: 'Comprehensive diploma covering software engineering principles, data structures, algorithms and system design.' },
   { id: 'cs50', logo: 'harvard', years: '2024', title: 'CS50: Introduction to Computer Science', issuer: 'Harvard University', text: "Completed CS50 – Harvard's introduction to computer science covering programming, algorithms and more." },
   { id: 'fcc-js', logo: 'javascript', years: '2024', title: 'JavaScript Algorithms and Data Structures', issuer: 'freeCodeCamp', text: 'Certified in JavaScript algorithms and data structures building logic and problem solving skills.' },
   { id: 'udemy-ios', logo: 'swift', years: '2023', title: 'Junior iOS App Developer Course', issuer: 'Udemy', text: 'Focused on Swift, SwiftUI, iOS development, app architecture and building real world iOS projects.' },

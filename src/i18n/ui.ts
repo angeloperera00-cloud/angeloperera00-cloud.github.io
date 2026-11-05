@@ -7,7 +7,7 @@ import type { Lang } from './index';
 const en = {
   nav: {
     about: 'About', experience: 'Experience', projects: 'Projects', skills: 'Skills', education: 'Education',
-    certifications: 'Certifications', youtube: 'YouTube', writing: 'Writing', contact: 'Contact',
+    certifications: 'Certifications', youtube: 'YouTube', writing: 'Articles', contact: 'Contact',
     letsTalk: "Let's talk", openMenu: 'Open menu', closeMenu: 'Close menu', backToTop: 'back to top',
     language: 'Language', skip: 'Skip to content',
   },
@@ -55,7 +55,7 @@ const en = {
   education: { label: 'Education', titleA: 'Learning', titleB: 'by building.', lede: 'Hands-on training at the Apple Developer Academy, backed by continuous self-directed study.', continuous: 'Continuous learning', certs: 'certifications', seeCerts: 'See certifications' },
   certs: { label: 'Certifications', titleA: 'Proof of', titleB: 'knowledge.', lede: "Continuous learning is part of my journey. These certifications represent the skills, knowledge and dedication I've built over the years.", count: 'Certifications', years: 'Years of learning', verifiedPct: 'Verified', verified: 'Verified', bar1: 'I believe in lifelong learning and staying up to date with the latest technologies.', bar2: 'More certifications and achievements coming soon.', motto: 'Keep Learning, Keep Building.' },
   youtube: { label: 'YouTube', titleA: 'Teaching', titleB: 'on YouTube.', visit: 'Visit channel', since: 'Channel stats since' },
-  writing: { label: 'Writing', titleA: 'Writing &', titleB: 'insights.', lede: "Thoughts on software engineering, iOS development, design, and the technologies I'm exploring.", follow: 'Follow on Medium', viewAll: 'View all articles', featured: 'Featured', read: 'Read article', minRead: 'min read', search: 'Search articles', allTopics: 'All topics', filterLabel: 'Filter articles by topic', article: 'article', articles: 'articles', in: 'in', matching: 'matching', none: 'No articles match', noneTopic: 'this topic', clear: 'Clear filters', loadMore: 'Load more', empty: 'Articles are on the way.', pubDate: 'Publication date', readTime: 'Reading time', draftNote: 'Layout preview. Your Medium articles replace these cards once added in src/content/articles.ts.' },
+  writing: { label: 'Articles', titleA: 'Articles &', titleB: 'insights.', lede: "Thoughts on software engineering, iOS development, design, and the technologies I'm exploring.", follow: 'Follow on Medium', viewAll: 'View all articles', featured: 'Featured', read: 'Read article', minRead: 'min read', search: 'Search articles', allTopics: 'All topics', filterLabel: 'Filter articles by topic', article: 'article', articles: 'articles', in: 'in', matching: 'matching', none: 'No articles match', noneTopic: 'this topic', clear: 'Clear filters', loadMore: 'Load more', empty: 'Articles are on the way.', pubDate: 'Publication date', readTime: 'Reading time', draftNote: 'Layout preview. Your Medium articles replace these cards once added in src/content/articles.ts.' },
   contact: {
     label: "Let's work together", titleA: "Let's build", titleB: 'something', titleC: 'amazing.', lede1: 'Have a project in mind or want to collaborate?', lede2: "I'd love to hear from you.",
     name: 'Your Name', email: 'Your Email', message: 'Your Message', nameLabel: 'Your name', emailLabel: 'Your email', messageLabel: 'Your message', send: 'Send message', sending: 'Sending…',
@@ -68,7 +68,7 @@ const en = {
   footer: { rights: 'All rights reserved.', built: 'Designed & Built with', love: 'love', top: 'Back to top' },
   toast: { linkMissing: "This link isn't available yet.", copied: 'Copied', selected: 'Selected — press ⌘C or Ctrl+C to copy' },
   notFound: { label: 'Page not found', a: 'This page', b: "doesn't exist.", home: 'Back to home' },
-  meta: { projects: 'Projects', projectsDesc: 'Apps, games and experiments by Angelo Perera across iOS, spatial computing, AI and the web.', caseStudy: 'Case study', writing: 'Writing & Insights' },
+  meta: { projects: 'Projects', projectsDesc: 'Apps, games and experiments by Angelo Perera across iOS, spatial computing, AI and the web.', caseStudy: 'Case study', writing: 'Articles & Insights' },
   device: { placeholder: 'Placeholder', placeholderFor: 'Placeholder for a', screenshot: 'screenshot' },
 };
 

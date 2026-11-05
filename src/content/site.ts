@@ -60,6 +60,6 @@ export const navItems = [
   { id: 'education', label: 'Education' },
   { id: 'certifications', label: 'Certifications' },
   { id: 'youtube', label: 'YouTube' },
-  { id: 'writing', label: 'Writing' },
+  { id: 'writing', label: 'Articles' },
   { id: 'contact', label: 'Contact' },
 ] as const;
