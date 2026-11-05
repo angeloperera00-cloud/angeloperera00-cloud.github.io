@@ -10,7 +10,7 @@ export const site = {
   description:
     'Software engineer in Naples, Italy. iOS, AR and spatial computing, AI and games: 10 projects with the stories behind them.',
   /** Set NEXT_PUBLIC_SITE_URL in your host (e.g. https://yourdomain.com) for absolute social/sitemap URLs. */
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://angeloperera.pages.dev',
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://angeloperera.dev',
 
   email: 'angeloperera00@gmail.com',
   // ⚠ The design showed "+39 351 035 8724" (hero) and "+39 351 036 8724" (contact). Keep the correct one.
